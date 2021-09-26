@@ -1,0 +1,226 @@
+body{
+  background: #f0edf4 !important;
+  padding: 0;
+}
+.p-component{
+  font-family: $font-family-sans-serif !important;
+}
+.text-container{
+  padding: 0 20px 20px 20px;
+}
+.p-element{
+  &:focus{
+    box-shadow: none !important;
+  }
+}
+.container-fluid{
+  &.space{
+    position: relative;
+  }
+}
+.custom-table {
+  .p-paginator {
+      justify-content: right;
+  }
+}
+
+.p-button {
+  min-width: unset !important;
+}
+
+.p-error-svg{
+  position: absolute !important;
+  right: 0;
+  top: 8px;
+  z-index: 5;
+  &:focus{
+    box-shadow: none !important;
+  }
+  .error-svg{
+    background: url("../svg-icons/error.svg");
+    width: 25px;
+    height: 25px;
+    background-size: contain;
+    filter: invert(59%) sepia(63%) saturate(2591%) hue-rotate(200deg) brightness(98%) contrast(94%);
+    .p-button-label{
+      color: $primary-color !important;
+    }
+  }
+}
+.add-msg{
+  background: url("../svg-icons/chat.svg");
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  color: $primary-color;
+}
+.delete-msg{
+  background: url("../svg-icons/delete-msg.svg");
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  top: 3px;
+  position: relative;
+  color: $primary-color;
+}
+
+
+.p-button {
+  background: $primary-color;
+  border: 1px solid $primary-color;
+  &.p-button-text {
+      text-decoration: underline;
+      color: $primary-color;
+      display: inline-block;
+      &:enabled:hover {
+          color: $primary-color;
+          text-decoration: none;
+      }
+  }
+  .p-button-outlined {
+      color: $primary-color;
+  }
+}
+
+
+.p-card{
+  margin: 20px 0;
+  border-radius: 5px !important;
+  .p-card-content{
+    display: flex;
+    padding: 0 !important;
+    span{
+      flex: auto;
+      &:last-child{
+        text-align: right;
+      }
+    }
+
+  }
+
+
+}
+
+
+
+.p-splitter{
+  padding: 0;
+  background: transparent !important;
+}
+.p-splitter-panel-nested{
+  display: block !important;
+}
+.p-splitter-horizontal>.p-splitter-gutter {
+  width: 8px !important;
+  background: #f2f1f3;
+  border: 1px #e1e1e1 solid;
+}
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////Media Query For Responsive//////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .fluid-p-0{
+    padding: 0 !important;
+  }
+  .inner-wrapper{
+    margin: 20px 0 0 0;
+  }
+  .form-wrapper{
+    padding:0 10px 10px 10px;
+  }
+  .mobile-splitter{
+    display: block;
+  }
+  .web-splitter, .p-error-svg{
+    display: none !important;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+  .fluid-p-0{
+    padding: 0 !important;
+  }
+  .inner-wrapper{
+    margin: 20px 0 0 0;
+  }
+  .form-wrapper{
+    padding:0 10px 10px 10px;
+  }
+  .mobile-splitter{
+    display: block;
+  }
+  .web-splitter, .p-error-svg{
+    display: none !important;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 767px) and (max-width: 992px){
+  .fluid-p-0{
+    padding: 0 !important;
+  }
+  .inner-wrapper{
+    margin: 20px 0 0 0;
+  }
+  .form-wrapper{
+    padding:0 10px 10px 10px;
+  }
+  .mobile-splitter{
+    display: block;
+  }
+  .web-splitter{
+    display: none;
+  }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px){
+  .container-fluid{
+    &.space{
+      padding: 0;
+    }
+  }
+  .inner-wrapper{
+    margin: 20px 0 0 0;
+  }
+  .form-wrapper{
+    padding:0 0 10px 0;
+  }
+  .mobile-splitter{
+    display: none;
+  }
+  .web-splitter{
+    display: block;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .container-fluid{
+    &.space{
+      padding: 0;
+    }
+  }
+  .inner-wrapper{
+    margin: 20px 0 0 0;
+  }
+  .form-wrapper{
+    padding:0 0 10px 0;
+  }
+  .mobile-splitter{
+    display: none;
+  }
+  .web-splitter{
+    display: block;
+  }
+}

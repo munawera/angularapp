@@ -1,0 +1,63 @@
+<div class="container-fluid fluid-p-0">
+  <div class="inner-wrapper">
+
+    <div class="form-wrapper">
+
+      <button type="button" class="btn btn-outline-primary">Save Review</button>
+      <button type="button" class="btn btn-outline-primary">Save & Send Later</button>
+      <button type="button" class="btn btn-outline-primary">Discard Info</button>
+
+      <p-card>
+        <span>Review ID: Content</span>
+        <span>Created By: Example 321</span>
+      </p-card>
+      <div class="form-group">
+        <label for="user">To Users</label>
+        <input type="text" class="form-control" id="user" pInputText>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" class="form-control" id="subject" pInputText>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-sm-12 col-md-6">
+          <label for="scope">Review Scope</label>
+          <p-dropdown id="scope" [options]="states" [(ngModel)]="selectedState" placeholder="Select Project" optionLabel="name"></p-dropdown>
+        </div>
+        <div class="form-group col-sm-12 col-md-6">
+          <label for="specification">Specification</label>
+          <p-dropdown id="specification" [options]="states" [(ngModel)]="selectedState" placeholder="Specification" optionLabel="name"></p-dropdown>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="address">Review Agenda/Description</label>
+        <textarea id="address" class="form-control" type="text" rows="4" pInputTextarea></textarea>
+      </div>
+
+
+      <p-table [value]="products" styleClass="p-datatable-gridlines custom-table p-datatable-striped head-style-2" responsiveLayout="scroll">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Specification Name</th>
+            <th>Type</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+          <tr>
+            <td>{{product.id}}</td>
+            <td>{{product.title}}</td>
+            <td>{{product.s_name}}</td>
+            <td>{{product.type}}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+
+    </div>
+
+  </div>
+</div>

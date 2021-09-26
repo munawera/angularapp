@@ -1,0 +1,172 @@
+<div class="container-fluid --container py-4">
+    <div class="row">
+        <div class="col-12">
+            <p-table selectionMode="single" dataKey="case_ID" [paginator]="true" paginatorPosition="top" [rows]="5" responsiveLayout="stack" styleClass="p-datatable-gridlines custom-table p-datatable-striped head-style-2" [value]="products">
+                <ng-template pTemplate="header" let-columns>
+                    <tr>
+                        <th>Use Case ID </th>
+                        <th>Use Case Title</th>
+                        <th>Created By</th>
+                        <th>Date Created</th>
+                        <th class="col-25em">Actions</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-product let-columns="columns">
+                    <tr>
+                        <td><span class="p-column-title">Use Case ID</span>{{product.case_ID}}</td>
+                        <td><span class="p-column-title">Use Case Title</span>{{product.case_Title}}</td>
+                        <td><span class="p-column-title">Created By</span>{{product.created_By}}</td>
+                        <td><span class="p-column-title">Date Created</span>{{product.creation_date}}</td>
+                        <td><span class="p-column-title">Actions</span>
+                            <p-button styleClass="p-button-text me-4 p-0">
+                                <img alt="delete" src="assets/images/wordicon.png" style="width: 1.5rem"/>
+                                <span class="ms-2">Deliverable</span>
+                            </p-button>
+                            <p-button styleClass="p-button-text me-4 p-0">
+                                <img alt="delete" src="assets/images/delicon.png" style="width: 1.25rem"/>
+                                <span class="ms-2">Delete</span>
+                            </p-button>
+                            <p-button styleClass="p-button-text p-0">
+                                <img alt="delete" src="assets/images/delicon.png" style="width: 1.25rem"/>
+                                <span class="ms-2">Open</span>
+                            </p-button>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+        <div class="col-12">
+                <div class="row no-gutters">
+                    <div class="col-lg-7">
+                        <p-tabView [(activeIndex)]="activeIndex" class="tab-view noback-grid">
+                            <p-tabPanel header="Description">
+                                <div class="main-content mb-3">
+                                    <div class="content-box">
+                                        <p-scrollPanel styleClass="scrollPanel">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae et leo duis ut diam. Ultricies mi quis hendrerit dolor magna eget est lorem. Amet consectetur adipiscing elit ut. Nam libero justo laoreet sit amet. Pharetra massa massa ultricies mi quis hendrerit dolor magna. Est ultricies integer quis auctor elit sed vulputate. Consequat ac felis donec et. Tellus orci ac auctor augue mauris. Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Tincidunt arcu non sodales neque sodales. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Sodales ut etiam sit amet nisl purus. Cursus sit amet dictum sit amet. Tristique senectus et netus et malesuada fames ac turpis egestas. Et tortor consequat id porta nibh venenatis cras sed. Diam maecenas ultricies mi eget mauris. Eget egestas purus viverra accumsan in nisl nisi. Suscipit adipiscing bibendum est ultricies integer. Mattis aliquam faucibus purus in massa tempor nec.
+                                            </p>>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae et leo duis ut diam. Ultricies mi quis hendrerit dolor magna eget est lorem. Amet consectetur adipiscing elit ut. Nam libero justo laoreet sit amet. Pharetra massa massa ultricies mi quis hendrerit dolor magna. Est ultricies integer quis auctor elit sed vulputate. Consequat ac felis donec et. Tellus orci ac auctor augue mauris. Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Tincidunt arcu non sodales neque sodales. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Sodales ut etiam sit amet nisl purus. Cursus sit amet dictum sit amet. Tristique senectus et netus et malesuada fames ac turpis egestas. Et tortor consequat id porta nibh venenatis cras sed. Diam maecenas ultricies mi eget mauris. Eget egestas purus viverra accumsan in nisl nisi. Suscipit adipiscing bibendum est ultricies integer. Mattis aliquam faucibus purus in massa tempor nec.
+                                            </p>>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae et leo duis ut diam. Ultricies mi quis hendrerit dolor magna eget est lorem. Amet consectetur adipiscing elit ut. Nam libero justo laoreet sit amet. Pharetra massa massa ultricies mi quis hendrerit dolor magna. Est ultricies integer quis auctor elit sed vulputate. Consequat ac felis donec et. Tellus orci ac auctor augue mauris. Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Tincidunt arcu non sodales neque sodales. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Sodales ut etiam sit amet nisl purus. Cursus sit amet dictum sit amet. Tristique senectus et netus et malesuada fames ac turpis egestas. Et tortor consequat id porta nibh venenatis cras sed. Diam maecenas ultricies mi eget mauris. Eget egestas purus viverra accumsan in nisl nisi. Suscipit adipiscing bibendum est ultricies integer. Mattis aliquam faucibus purus in massa tempor nec.
+                                            </p>>
+                                        </p-scrollPanel>
+                                    </div>
+                                    <div class="text-end">
+                                        <button pButton type="button" label="Save" ></button>
+                                        <button pButton type="button" class="p-button-outlined ms-3" label="Cancel" ></button>
+                                    </div>
+                                </div>
+                            </p-tabPanel>
+                            <p-tabPanel header="Conditions">
+                                <p-table responsiveLayout="stack" styleClass="p-datatable-gridlines custom-table p-datatable-striped head-style-2" [value]="caseflow">
+                                    <ng-template pTemplate="header" let-columns>
+                                        <tr>
+                                            <th>ID </th>
+                                            <th>Use Case Condition</th>
+                                            <th>Type</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </ng-template>
+                                    <ng-template pTemplate="body" let-caseflow let-columns="columns">
+                                        <tr>
+                                            <td><span class="p-column-title">ID</span>{{caseflow.id}}</td>
+                                            <td><span class="p-column-title">Use Case Condition</span>{{caseflow.case}}</td>
+                                            <td><span class="p-column-title">Type</span>{{caseflow.type}}</td>
+                                            <td><span class="p-column-title">Actions</span>
+                                                <p-button styleClass="p-button-text me-4 p-0">
+                                                    <span class="ms-2">Delete</span>
+                                                </p-button>
+                                                <p-button styleClass="p-button-text me-4 p-0">
+                                                    <span class="ms-2">Change</span>
+                                                </p-button>
+                                            </td>
+                                        </tr>
+                                    </ng-template>
+                                </p-table>
+                            </p-tabPanel>
+                            <p-tabPanel header="Triggers">
+                                <p-table responsiveLayout="stack" styleClass="p-datatable-gridlines custom-table p-datatable-striped head-style-2" [value]="flows">
+                                    <ng-template pTemplate="header" let-columns>
+                                        <tr>
+                                            <th>Flow ID </th>
+                                            <th>Normal ID</th>
+                                        </tr>
+                                    </ng-template>
+                                    <ng-template pTemplate="body" let-flows let-columns="columns">
+                                        <tr>
+                                            <td><span class="p-column-title">Flow ID</span>{{flows.flow_ID}}</td>
+                                            <td><span class="p-column-title">Normal ID</span>{{flows.normal_ID}}</td>
+                                        </tr>
+                                    </ng-template>
+                                </p-table>
+                            </p-tabPanel>
+                        </p-tabView>
+                        
+                    </div>
+                    <div class="col-lg-5">
+                        <p-tabView [(activeIndex)]="activeIndex" class="tab-view noback-grid">
+                            <p-tabPanel header="Use Case Flows">
+                                <h5 class="highlight my-3">
+                                    <img alt="normal" src="assets/images/normalicon.png" style="width: 1.25rem"/>
+                                    <span class="d-inline-block ms-2">Normal Flow</span>
+                                </h5>
+                                <p-table responsiveLayout="stack" styleClass="p-datatable-gridlines custom-table p-datatable-striped head-style-2" [value]="flows">
+                                    <ng-template pTemplate="header" let-columns>
+                                        <tr>
+                                            <th>Flow ID </th>
+                                            <th>Normal ID</th>
+                                        </tr>
+                                    </ng-template>
+                                    <ng-template pTemplate="body" let-flows let-columns="columns">
+                                        <tr>
+                                            <td><span class="p-column-title">Flow ID</span>{{flows.flow_ID}}</td>
+                                            <td><span class="p-column-title">Normal ID</span>{{flows.normal_ID}}</td>
+                                        </tr>
+                                    </ng-template>
+                                </p-table>
+                                <h5 class="highlight my-3">
+                                    <img alt="normal" src="assets/images/alternateicon.png" style="width: 1.25rem"/>
+                                    <span class="d-inline-block ms-2">Alternate Flow</span>
+                                </h5>
+                                <p-table responsiveLayout="stack" styleClass="p-datatable-gridlines custom-table p-datatable-striped head-style-2" [value]="flows">
+                                    <ng-template pTemplate="header" let-columns>
+                                        <tr>
+                                            <th>Flow ID </th>
+                                            <th>Alternate Flow</th>
+                                        </tr>
+                                    </ng-template>
+                                    <ng-template pTemplate="body" let-flows let-columns="columns">
+                                        <tr>
+                                            <td><span class="p-column-title">Flow ID</span>{{flows.flow_ID}}</td>
+                                            <td><span class="p-column-title">Normal ID</span>{{flows.normal_ID}}</td>
+                                        </tr>
+                                    </ng-template>
+                                </p-table>
+                                <h5 class="highlight">
+                                    <img alt="normal" src="assets/images/exceptionicon.png" style="width: 1.25rem"/>
+                                    <span class="d-inline-block ms-2">Exception Flow</span>
+                                </h5>
+                                <p-table responsiveLayout="stack" styleClass="p-datatable-gridlines custom-table p-datatable-striped head-style-2" [value]="flows">
+                                    <ng-template pTemplate="header" let-columns>
+                                        <tr>
+                                            <th>Flow ID </th>
+                                            <th>Exception Flow</th>
+                                        </tr>
+                                    </ng-template>
+                                    <ng-template pTemplate="body" let-flows let-columns="columns">
+                                        <tr>
+                                            <td><span class="p-column-title">Flow ID</span>{{flows.flow_ID}}</td>
+                                            <td><span class="p-column-title">Normal ID</span>{{flows.normal_ID}}</td>
+                                        </tr>
+                                    </ng-template>
+                                </p-table>
+                            </p-tabPanel>
+                        </p-tabView>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

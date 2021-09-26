@@ -1,0 +1,245 @@
+.main-menu{
+
+  .p-tabmenu{
+    .p-tabmenu-nav {
+      border: 0 !important;
+      position: relative;
+      .p-highlight{
+        .p-menuitem-link{
+          background: $gray-200 !important;
+          color: $secondary !important;
+        }
+      }
+      .p-menuitem-link{
+        flex-direction: column;
+        border: 0 !important;
+        padding: .7rem !important;
+        text-align: center;
+
+        &:hover{
+          background: $gray-200 !important;
+          color: $secondary !important;
+        }
+
+        .p-menuitem-text {
+          line-height: 1;
+          font-size: 14px;
+          font-weight: 400;
+        }
+        .p-menuitem-svg{
+          width: 20px;
+          height: 20px;
+          background-size: contain !important;
+          margin: 0 0 15px 0 !important;
+        }
+        .svg-home{
+          background: url("../svg-icons/house.svg");
+        }
+        .svg-file{
+          background: url("../svg-icons/folder.svg");
+        }
+        .svg-selected{
+          background: url("../svg-icons/checkbox.svg");
+        }
+        .svg-reviews{
+          background: url("../svg-icons/tasks.svg");
+        }
+        .svg-adduser{
+          background: url("../svg-icons/add.svg");
+        }
+        .svg-delete{
+          background: url("../svg-icons/delete.svg");
+        }
+      }
+      .p-tabmenu-ink-bar {
+        background: $primary-color;
+      }
+    }
+  }
+
+  .p-tabview-panels{
+    padding: 0 !important;
+    box-shadow: 0 4px 35px #c6c5cc;
+  }
+  .p-tabview-nav-content{
+    background-color: #342f57 !important;
+    border-top: 1px #544e80 solid;
+    .p-tabview-nav {
+      background: transparent !important;
+      margin-top: 5px;
+      border: 0 !important;
+      .p-highlight{
+        .p-tabview-nav-link{
+          background: #fff !important;
+          border-radius: 5px 5px 0 0 !important;
+          color: #342f57 !important;
+        }
+      }
+      .p-tabview-nav-link{
+        background-color: $primary !important;
+        border-bottom: 0 !important;
+        font-size: 14px;
+        font-weight: 600 !important;
+        color: $white !important;
+        transition: none;
+        border-radius: 5px 5px 0 0;
+        &:hover{
+          background: darken($primary, 5%) !important;
+          color: $white !important;
+        }
+      }
+      .p-tabview-ink-bar{
+        display: none !important;
+      }
+    }
+  }
+}
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////Media Query For Responsive//////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .p-tabview .p-tabview-panels{
+    padding: 0 !important;
+  }
+  .main-menu{
+    .tab-view-mobile{
+      display: none;
+      &.show{
+        display: block;
+      }
+    }
+    .p-tabview-nav-content{
+      .p-tabview-nav {
+        display: inline-block !important;
+        width: 100%;
+        text-align: center;
+        li{
+          display: inline-block !important;
+          .p-tabview-nav-link {
+            padding: 0.75rem 1.5rem !important;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+  .p-tabview .p-tabview-panels{
+    padding: 0 !important;
+  }
+  .main-menu{
+    .tab-view-mobile{
+      display: none;
+      &.show{
+        display: block;
+      }
+    }
+
+    .p-tabview-nav-content{
+      .p-tabview-nav {
+        display: inline-block !important;
+        width: 100%;
+        text-align: center;
+        li{
+          display: inline-block !important;
+          .p-tabview-nav-link {
+            padding: 0.75rem 1.5rem !important;
+            border: none !important;
+          }
+        }
+      }
+    }
+    .p-tabmenu{
+      .p-tabmenu-nav {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        li{
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 767px) and (max-width: 992px){
+  .p-tabview .p-tabview-panels{
+    padding: 0 !important;
+  }
+  .main-menu{
+    .tab-view-mobile{
+      display: none;
+      &.show{
+        display: block;
+      }
+    }
+
+    .p-tabview-nav-content{
+      .p-tabview-nav {
+        display: inline-block !important;
+        width: 100%;
+        text-align: center;
+        li{
+          display: inline-block !important;
+          .p-tabview-nav-link {
+            border: none !important;
+          }
+        }
+      }
+    }
+    .p-tabmenu{
+      .p-tabmenu-nav {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        li{
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px){
+  .main-menu{
+    .p-tabview-nav-content{
+      .p-tabview-nav {
+        li{
+          .p-tabview-nav-link {
+            padding: 0.75rem 2.5rem !important;
+            border: none !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .main-menu{
+    .p-tabview-nav-content{
+      .p-tabview-nav {
+        li{
+          .p-tabview-nav-link {
+            padding: 0.75rem 2.5rem !important;
+            border: none !important;
+          }
+        }
+      }
+    }
+  }
+}

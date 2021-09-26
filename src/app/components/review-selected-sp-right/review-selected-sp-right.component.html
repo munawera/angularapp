@@ -1,0 +1,50 @@
+<div class="container-fluid space">
+  <button pButton type="button" label="Close" icon="error-svg" class="p-button-text p-error-svg" iconPos="left"></button>
+  <p-tabView class="tab-view vh100">
+    <p-tabPanel header="Review Comments">
+
+      <p-table [value]="products" styleClass="p-datatable-gridlines custom-table p-datatable-striped head-style-2" responsiveLayout="scroll">
+        <ng-template pTemplate="caption">
+          <button pButton type="button" label="New Comment" icon="add-msg" class="p-button-text" iconPos="left"></button>
+          <button pButton type="button" label="Remove Comment" icon="delete-msg" class="p-button-text" iconPos="left"></button>
+
+        </ng-template>
+        <ng-template pTemplate="header">
+          <tr>
+            <th>ID</th>
+            <th>Comment</th>
+            <th>From User</th>
+            <th>Date Received</th>
+            <th>State</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+          <tr>
+            <td>{{product.id}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.date}}</td>
+            <td>{{product.state}}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+
+      <div class="text-container">
+        <div class="form-group">
+          <label for="address2">ID : 345</label>
+          <textarea id="address2" type="text" class="form-control" rows="4" pInputTextarea></textarea>
+        </div>
+
+        <button type="button" class="btn btn-outline-primary">Save Comment</button>
+        <button type="button" class="btn btn-outline-primary">Discard Info</button>
+
+      </div>
+
+    </p-tabPanel>
+    <p-tabPanel header="View Traceability">
+      <div class="text-container">
+        View Traceability
+      </div>
+    </p-tabPanel>
+  </p-tabView>
+</div>
