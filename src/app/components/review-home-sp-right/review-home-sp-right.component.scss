@@ -1,0 +1,19 @@
+@import "../../../assets/styles/functions";
+@import "../../../assets/styles/variables";
+
+.form-sp-wrapper{
+  padding: 10px;
+}
+.form-check-label{
+  color: $gray-600;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0;
+}
+.form-check-group{
+  padding: 10px 20px;
+  background: #f7f5f9;
+  border: 1px #d8d8d8 solid;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}

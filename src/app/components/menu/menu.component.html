@@ -1,0 +1,119 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+
+  <a class="navbar-brand" href="#">
+    <img src="assets/images/pearlsLogo.png" height="40">
+  </a>
+
+  <app-menu-search-form class="mobile mobile-search"></app-menu-search-form>
+
+  <button class="navbar-toggler" type="button" (click)="clickEvent()">
+    <span class="pi pi-fw pi-bars"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" [ngClass]="menu ? 'show' : ''">
+
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="pi pi-fw pi-compass"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="pi pi-fw pi-chart-bar"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="pi pi-fw pi-user"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="pi pi-fw pi-calendar"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="pi pi-fw pi-folder-open"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="pi pi-fw pi-file"></i></a>
+      </li>
+      <li class="nav-item r-divider">
+        <a class="nav-link" href="#"><i class="pi pi-fw pi-globe"></i></a>
+      </li>
+      <li class="nav-item l-divider">
+        <a class="nav-link" href="#"><i class="pi pi-fw pi-comments"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="pi pi-fw pi-file-o"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="pi pi-fw pi-book"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="pi pi-fw pi-file-pdf"></i></a>
+      </li>
+<!--      -&#45;&#45;-->
+      <li class="nav-item mobile">
+        <a class="nav-link" href="#"><i class="pi pi-fw pi-refresh"></i></a>
+      </li>
+      <li class="nav-item mobile">
+        <a class="nav-link" href="#"><i class="pi pi-fw pi-comment"></i></a>
+      </li>
+      <li class="nav-item mobile">
+        <a class="nav-link" href="#"><i class="pi pi-fw pi-user-plus"></i></a>
+      </li>
+
+    </ul>
+
+    <app-menu-search-form class="web search-form"></app-menu-search-form>
+
+    <a href="javascript:" class="project_name m-auto">Current Project Name</a>
+
+    <ul class="navbar-nav web">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="pi pi-fw pi-refresh"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="pi pi-fw pi-comment"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="pi pi-fw pi-user-plus"></i></a>
+      </li>
+    </ul>
+  </div>
+
+</nav>
+
+<p-tabView class="tab-view-mobile menu-tab-view" [ngClass]="menu ? 'show' : ''">
+
+  <p-tabPanel header="Home">
+    <p-tabMenu [model]="itemsTabs"></p-tabMenu>
+  </p-tabPanel>
+
+  <p-tabPanel header="Tools">
+    <p-tabMenu [model]="itemsTabs"></p-tabMenu>
+  </p-tabPanel>
+
+  <p-tabPanel header="Reviews" [selected]="true">
+<!--    <p-tabMenu [model]="itemsTabs2"></p-tabMenu>-->
+    <nav class="nav">
+      <li routerLinkActive="active">
+        <a class="nav-link" routerLink="review-home"><i class="svg-home"></i><span>Review Home</span></a>
+      </li>
+      <li routerLinkActive="active">
+        <a class="nav-link" ><i class="svg-file"></i><span>Review Entire File</span></a>
+      </li>
+      <li routerLinkActive="active">
+        <a class="nav-link" routerLink="review-selected"><i class="svg-selected"></i><span>Review Selected</span></a>
+      </li>
+      <li routerLinkActive="active">
+        <a class="nav-link" ><i class="svg-reviews"></i><span>My Reviews</span></a>
+      </li>
+      <li routerLinkActive="active">
+        <a class="nav-link" ><i class="svg-adduser"></i><span>Add Users</span></a>
+      </li>
+      <li routerLinkActive="active">
+        <a class="nav-link" ><i class="svg-delete"></i><span>Delete Review</span></a>
+      </li>
+    </nav>
+  </p-tabPanel>
+
+  <p-tabPanel header="Help">
+    <p-tabMenu [model]="itemsTabs"></p-tabMenu>
+  </p-tabPanel>
+
+</p-tabView>

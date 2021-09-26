@@ -1,0 +1,22 @@
+<p-splitter [style]="{'height': '100%'}" [panelSizes]="[50,50]" class="web-splitter">
+  <ng-template pTemplate>
+
+    <app-review-selected-sp-left></app-review-selected-sp-left>
+
+  </ng-template>
+  <ng-template pTemplate>
+
+    <app-review-selected-sp-right></app-review-selected-sp-right>
+
+  </ng-template>
+</p-splitter>
+
+<div class="container-fluid fluid-p-0 mobile-splitter">
+  <div class="col-12">
+    <app-review-selected-sp-left></app-review-selected-sp-left>
+
+    <app-review-selected-sp-right></app-review-selected-sp-right>
+  </div>
+</div>
+
+

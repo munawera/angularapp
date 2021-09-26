@@ -1,6 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+@import "assets/styles/functions";
+@import "assets/styles/variables";
+@import "assets/styles/navbar";
+@import "assets/styles/common";
+@import "assets/styles/tab-navbar";
+@import "assets/styles/tab-view";
+@import "assets/styles/datatable";
+@import "assets/styles/forms";
 
-@import "assets/styles/_common";
-@import "assets/styles/_menu";
 
 
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////Media Query For Responsive//////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 767px) and (max-width: 992px){
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px){
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}

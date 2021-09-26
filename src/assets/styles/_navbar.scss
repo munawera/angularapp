@@ -1,0 +1,305 @@
+
+.navbar{
+  background: $primary;
+  box-shadow: -2px 1px 13px #0e0e0ee8;
+  .navbar-toggler{
+    background: darken($primary, 3%);
+    border-radius: 10px;
+    color: $gray-500 !important;
+    height: 36px;
+  }
+  .navbar-nav{
+    li {
+      position: relative;
+      a {
+        margin: 0 !important;
+        padding: 0.5rem !important;
+        color: $gray-500 !important;
+        border-radius: 5px;
+        i{
+          font-size: 1.1rem;
+          position: relative;
+          top: 1px;
+        }
+      }
+      &:hover{
+        background: transparent !important;
+        a{
+          color: $white !important;
+          background: darken($primary, 5%);
+        }
+      }
+    }
+
+  }
+
+  a.project_name{
+    color: $secondary;
+    font-size: 14px;
+    font-weight: 400 !important;
+    text-align: center;
+    margin: 12px 6rem;
+    &:hover{
+      color: darken($secondary, 10%);
+    }
+  }
+  form {
+    display: flex !important;
+    position: relative;
+    width: 100%;
+    margin:0;
+    height: 45px;
+    .pi-search{
+      color: $gray-500;
+      z-index: 2;
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      height: 15px;
+    }
+    .form-control {
+      background: darken($primary, 4%);
+      border: 0;
+      border-radius: 20px 0 0 20px !important;
+      color: $gray-500;
+      font-weight: 400;
+      font-size: 14px;
+      padding-left: 45px;
+      &:focus{
+        box-shadow: none;
+      }
+    }
+    .btn{
+      background: darken($primary, 4%) !important;
+      border: 0!important;
+      border-radius: 0 20px 20px 0;
+      color: $secondary !important;
+      font-size: 25px;
+      &:hover{
+        background: darken($primary, 10%) !important;
+        color: $white !important;
+      }
+    }
+  }
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////Media Query For Responsive//////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  //.container-fluid{
+  //  padding: 0 !important;
+  //}
+  .inner-wrapper{
+    margin: 20px 0 0 0;
+  }
+  .form-wrapper{
+    padding:0 20px 10px 20px;
+  }
+  //.p-button.p-button-text{
+  //  display: none !important;
+  //}
+  .navbar-brand {
+    margin-right: 0 !important;
+  }
+  .navbar-nav {
+    flex-direction: row !important;
+  }
+  .web{
+    display: none !important;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+  //.container-fluid{
+  //  padding: 0 !important;
+  //}
+  .inner-wrapper{
+    margin: 20px 0 0 0;
+  }
+  .form-wrapper{
+    padding:0 20px 10px 20px;
+  }
+  //.p-button.p-button-text{
+  //  display: none !important;
+  //}
+  .navbar-brand {
+    margin-right: 0 !important;
+  }
+  .navbar {
+    padding: 10px 15px;
+    .mobile-search{
+      width: 50%;
+    }
+    a.project_name {
+      margin: 12px 6rem !important;
+      display: inline-block;
+    }
+    .navbar-collapse {
+      margin: 15px 0 0 0;
+      text-align: center;
+    }
+    .navbar-nav{
+      display: inline-block;
+      li {
+        position: relative;
+        display: inline-block;
+        a {
+          background: darken($primary, 5%);
+          border: 1px darken($primary, 6%) solid;
+          border-radius: 5px;
+          padding: 10px 12px;
+          margin: 5px !important;
+        }
+      }
+
+    }
+  }
+  .web{
+    display: none !important;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 767px) and (max-width: 992px){
+  //.container-fluid{
+  //  padding: 0 !important;
+  //}
+  .inner-wrapper{
+    margin: 20px 0 0 0;
+  }
+  .form-wrapper{
+    padding:0 20px 10px 20px;
+  }
+  //.p-button.p-button-text{
+  //  display: none !important;
+  //}
+  .web{
+    display: none !important;
+  }
+
+  .navbar {
+    padding: 10px 15px;
+    .mobile-search{
+      width: 50%;
+    }
+    a.project_name {
+      margin: 12px 6rem !important;
+      display: inline-block;
+    }
+    .navbar-collapse {
+      margin: 15px 0 0 0;
+      text-align: center;
+    }
+    .navbar-nav{
+      display: inline-block;
+      li {
+        position: relative;
+        display: inline-block;
+        a {
+          background: darken($primary, 5%);
+          border: 1px darken($primary, 6%) solid;
+          border-radius: 5px;
+          padding: 10px 12px;
+          margin: 0 5px !important;
+        }
+      }
+
+    }
+  }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px){
+  .web{
+    display: flex !important;
+  }
+  .mobile{
+    display: none;
+  }
+  .navbar {
+    padding: 10px 15px;
+    .navbar-brand {
+      margin-right: 2rem;
+    }
+    .navbar-collapse{
+      .search-form{
+        width: 20%;
+        margin: 0 0 0 2rem;
+      }
+      .navbar-nav{
+        li {
+          a{
+            padding: 0.3rem !important;
+          }
+          &.r-divider{
+            margin-right: 20px !important;
+            &:after{
+              content: '';
+              height: 25px;
+              width: 1px;
+              background: $gray-700;
+              position: absolute;
+              right: -20px;
+              top: 7px;
+            }
+          }
+          &.l-divider{
+            margin-left: 20px !important;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .web{
+    display: flex !important;
+  }
+  .mobile{
+    display: none;
+  }
+  .navbar {
+    padding: 10px;
+    .navbar-brand {
+      margin-right: 2rem;
+    }
+    .navbar-collapse{
+      .search-form{
+        width: 30%;
+        margin: 0 2rem;
+      }
+      .navbar-nav{
+        li {
+          &.r-divider{
+            margin-right: 20px !important;
+            &:after{
+              content: '';
+              height: 25px;
+              width: 1px;
+              background: $gray-700;
+              position: absolute;
+              right: -20px;
+              top: 7px;
+            }
+          }
+          &.l-divider{
+            margin-left: 20px !important;
+          }
+        }
+      }
+    }
+
+  }
+}

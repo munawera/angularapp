@@ -1,0 +1,121 @@
+@import "../../../assets/styles/functions";
+@import "../../../assets/styles/variables";
+.nav{
+  li{
+    border: 0 !important;
+    padding: 0 !important;
+    text-align: center;
+    &.active{
+      a{
+        background: $gray-200 !important;
+        color: $secondary !important;
+        border-bottom: 2px $secondary solid;
+      }
+    }
+    a{
+      line-height: 1;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: center;
+      padding: .7rem;
+      color: $gray-500;
+      cursor: pointer;
+      &:hover{
+        background: $gray-200 !important;
+        color: $secondary !important;
+        border-bottom: 2px $secondary solid;
+      }
+      i{
+        width: 20px;
+        height: 20px;
+        background-size: contain !important;
+        margin: 0 0 10px 0 !important;
+        display: inline-block;
+      }
+      span {
+        display: block;
+      }
+      .svg-home{
+        background: url("../../../assets/svg-icons/house.svg");
+      }
+      .svg-file{
+        background: url("../../../assets/svg-icons/folder.svg");
+      }
+      .svg-selected{
+        background: url("../../../assets/svg-icons/checkbox.svg");
+      }
+      .svg-reviews{
+        background: url("../../../assets/svg-icons/tasks.svg");
+      }
+      .svg-adduser{
+        background: url("../../../assets/svg-icons/add.svg");
+      }
+      .svg-delete{
+        background: url("../../../assets/svg-icons/delete.svg");
+      }
+    }
+
+  }
+}
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////Media Query For Responsive//////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .nav{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    li{
+      display: inline-block;
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+  .nav{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    li{
+      display: inline-block;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 767px) and (max-width: 992px){
+  .nav{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    li{
+      display: inline-block;
+    }
+  }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px){
+  .nav{
+    li{
+      flex-direction: column;
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .nav{
+    li{
+      flex-direction: column;
+    }
+  }
+}
