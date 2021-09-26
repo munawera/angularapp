@@ -85,29 +85,50 @@
   </p-tabPanel>
 
   <p-tabPanel header="Tools">
-    <p-tabMenu [model]="itemsTabs"></p-tabMenu>
+    <nav class="nav">
+      <li routerLinkActive="active">
+        <a class="nav-link" routerLink="review-home"><i class="icon-add-2"></i><span>Mark as Favorite</span></a>
+      </li>
+      <li routerLinkActive="active">
+        <a class="nav-link" ><i class="icon-calendar-1"></i><span>Mark as Baseline</span></a>
+      </li>
+      <li routerLinkActive="active">
+        <a class="nav-link" routerLink="review-selected"><i class="icon-file"></i><span>Object Properties</span></a>
+      </li>
+      <li routerLinkActive="active">
+        <a class="nav-link" ><i class="icon-import"></i><span>Import</span></a>
+      </li>
+      <li routerLinkActive="active">
+        <a class="nav-link" ><i class="icon-before-after"></i><span>Compare Specs</span></a>
+      </li>
+      <li routerLinkActive="active">
+        <a class="nav-link" ><i class="icon-driver-license"></i><span>View Object ID</span></a>
+      </li>
+      <li routerLinkActive="active">
+        <a class="nav-link" ><i class="icon-report"></i><span>View History</span></a>
+      </li>
+    </nav>
   </p-tabPanel>
 
   <p-tabPanel header="Reviews" [selected]="true">
-<!--    <p-tabMenu [model]="itemsTabs2"></p-tabMenu>-->
     <nav class="nav">
       <li routerLinkActive="active">
-        <a class="nav-link" routerLink="review-home"><i class="svg-home"></i><span>Review Home</span></a>
+        <a class="nav-link" routerLink="review-home"><i class="icon-home-1"></i><span>Review Home</span></a>
       </li>
       <li routerLinkActive="active">
-        <a class="nav-link" ><i class="svg-file"></i><span>Review Entire File</span></a>
+        <a class="nav-link" ><i class="icon-folder-3"></i><span>Review Entire File</span></a>
       </li>
       <li routerLinkActive="active">
-        <a class="nav-link" routerLink="review-selected"><i class="svg-selected"></i><span>Review Selected</span></a>
+        <a class="nav-link" routerLink="review-selected"><i class="icon-add-1"></i><span>Review Selected</span></a>
       </li>
       <li routerLinkActive="active">
-        <a class="nav-link" ><i class="svg-reviews"></i><span>My Reviews</span></a>
+        <a class="nav-link" ><i class="icon-files"></i><span>My Reviews</span></a>
       </li>
       <li routerLinkActive="active">
-        <a class="nav-link" ><i class="svg-adduser"></i><span>Add Users</span></a>
+        <a class="nav-link" ><i class="icon-add-user"></i><span>Add Users</span></a>
       </li>
       <li routerLinkActive="active">
-        <a class="nav-link" ><i class="svg-delete"></i><span>Delete Review</span></a>
+        <a class="nav-link" ><i class="icon-delete-2"></i><span>Delete Review</span></a>
       </li>
     </nav>
   </p-tabPanel>
