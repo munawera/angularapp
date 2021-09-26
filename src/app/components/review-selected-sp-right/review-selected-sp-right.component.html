@@ -1,12 +1,16 @@
 <div class="container-fluid space">
-  <button pButton type="button" label="Close" icon="error-svg" class="p-button-text p-error-svg" iconPos="left"></button>
+<!--  <button pButton type="button" label="Close" icon="error-svg" class="p-button-text p-error-svg" iconPos="left"></button>-->
+  <button type="button" class="btn btn-link p-error-svg"><i class="icon-cancel"></i> Close</button>
   <p-tabView class="tab-view vh100">
     <p-tabPanel header="Review Comments">
 
       <p-table [value]="products" styleClass="p-datatable-gridlines custom-table p-datatable-striped head-style-2" responsiveLayout="scroll">
         <ng-template pTemplate="caption">
-          <button pButton type="button" label="New Comment" icon="add-msg" class="p-button-text" iconPos="left"></button>
-          <button pButton type="button" label="Remove Comment" icon="delete-msg" class="p-button-text" iconPos="left"></button>
+          <button type="button" class="btn btn-link"><i class="icon-chat"></i> New Comment</button>
+          <button type="button" class="btn btn-link"><i class="icon-cancel-speech-bubbles"></i> Remove Comment</button>
+
+<!--          <button pButton type="button" label="New Comment" icon="add-msg" class="p-button-text" iconPos="left"></button>-->
+<!--          <button pButton type="button" label="Remove Comment" icon="delete-msg" class="p-button-text" iconPos="left"></button>-->
 
         </ng-template>
         <ng-template pTemplate="header">

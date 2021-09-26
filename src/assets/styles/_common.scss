@@ -101,6 +101,15 @@ body{
 
 }
 
+.btn-link{
+  text-decoration: none !important;
+  color: $secondary !important;
+  i{
+    position: relative;
+    top:2px;
+  }
+}
+
 
 
 .p-splitter{
