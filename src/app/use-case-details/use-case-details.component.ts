@@ -7,15 +7,15 @@ interface dropDown {
 
 @Component({
   selector: 'app-usecasedetails',
-  templateUrl: './usecasedetails.component.html',
-  styleUrls: ['./usecasedetails.component.scss']
+  templateUrl: './use-case-details.component.html',
+  styleUrls: ['./use-case-details.component.scss']
 })
 
-export class UsecasedetailsComponent implements OnInit {
+export class UseCaseDetailsComponent implements OnInit {
 
   priority: dropDown[];
   frequency: dropDown[];
-  
+
   selectedVal: dropDown | undefined;
   selectedVal1: dropDown | undefined;
   activeIndex: number = 0;
@@ -78,7 +78,7 @@ export class UsecasedetailsComponent implements OnInit {
       {name: 'Istanbul', code: 'IST'},
       {name: 'Paris', code: 'PRS'}
     ];
-    
+
   }
 
   ngOnInit(): void {

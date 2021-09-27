@@ -26,10 +26,11 @@ import { MenuSearchFormComponent } from './components/menu-search-form/menu-sear
 import { ReviewHomeComponent } from './review-home/review-home.component';
 import { ReviewHomeSpLeftComponent } from './components/review-home-sp-left/review-home-sp-left.component';
 import { ReviewHomeSpRightComponent } from './components/review-home-sp-right/review-home-sp-right.component';
-import { UsecasedetailsComponent } from './usecasedetails/usecasedetails.component';
+import { UseCaseDetailsComponent } from './use-case-details/use-case-details.component';
 import { NewUseCaseComponent } from './new-use-case/new-use-case.component';
 import { EnterpriseLibraryComponent } from './enterprise-library/enterprise-library.component';
-
+import { ToolsComponent } from './tools/tools.component';
+import { TreeModule } from 'primeng/tree';
 
 @NgModule({
   declarations: [
@@ -43,8 +44,9 @@ import { EnterpriseLibraryComponent } from './enterprise-library/enterprise-libr
     ReviewHomeSpLeftComponent,
     ReviewHomeSpRightComponent,
     NewUseCaseComponent,
-    UsecasedetailsComponent,
-    EnterpriseLibraryComponent
+    UseCaseDetailsComponent,
+    EnterpriseLibraryComponent,
+    ToolsComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,7 +65,8 @@ import { EnterpriseLibraryComponent } from './enterprise-library/enterprise-libr
     DividerModule,
     DropdownModule,
     InputTextareaModule,
-    CardModule
+    CardModule,
+    TreeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

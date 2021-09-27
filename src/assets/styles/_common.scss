@@ -60,7 +60,7 @@ mb-0{
     background-size: contain;
     filter: invert(59%) sepia(63%) saturate(2591%) hue-rotate(200deg) brightness(98%) contrast(94%);
     .p-button-label{
-      color: $primary-color !important;
+      color: $secondary !important;
     }
   }
 }
@@ -69,7 +69,7 @@ mb-0{
   width: 25px;
   height: 25px;
   background-size: contain;
-  color: $primary-color;
+  color: $secondary;
 }
 .delete-msg{
   background: url("../svg-icons/delete-msg.svg");
@@ -78,24 +78,24 @@ mb-0{
   background-size: contain;
   top: 3px;
   position: relative;
-  color: $primary-color;
+  color: $secondary;
 }
 
 
 .p-button {
-  background: $primary-color;
-  border: 1px solid $primary-color;
+  background: $secondary;
+  border: 1px solid $secondary;
   &.p-button-text {
       text-decoration: underline;
-      color: $primary-color;
+      color: $secondary;
       display: inline-block;
       &:enabled:hover {
-          color: $primary-color;
+          color: $secondary;
           text-decoration: none;
       }
   }
   .p-button-outlined {
-      color: $primary-color;
+      color: $secondary;
   }
 }
 

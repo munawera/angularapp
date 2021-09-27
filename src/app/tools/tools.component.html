@@ -1,0 +1,24 @@
+<div class="container-fluid padding-t-b-20">
+  <div class="row">
+    <div class="col-md-8">
+      <p-tabView class="tree-tab-view">
+        <p-tabPanel header="Untitled Document">
+          <p-tree [value]="treeDate">
+            <ng-template let-node  pTemplate="default">
+              <span class="me-auto">{{node.label}}</span>
+              <a href="javascript:">{{node.id}}</a>
+              <a href="javascript:" *ngIf="node.id" class="icon-flag-o"></a>
+              <a href="javascript:" *ngIf="node.id" class="icon-chat"></a>
+            </ng-template>
+          </p-tree>
+        </p-tabPanel>
+        <p-tabPanel header="Untitled Document 2">
+
+        </p-tabPanel>
+        <p-tabPanel header="Untitled Document 3">
+          Content 3
+        </p-tabPanel>
+      </p-tabView>
+    </div>
+  </div>
+</div>

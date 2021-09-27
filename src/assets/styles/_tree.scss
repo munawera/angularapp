@@ -1,0 +1,128 @@
+.tree-tab-view{
+  .p-tabview-panels{
+    padding: 0 !important;
+  }
+  .p-tree{
+    position: relative;
+    border-top:none !important;
+    border-radius: 0 !important;
+    border-right: 0 !important;
+    &:before{
+      content: "";
+      height: 100%;
+      width: 37px;
+      background: #edf1f4;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      border-right: 1px #e0e0e0 solid;
+    }
+    .pi-chevron-right, .pi-chevron-right{
+      &:before {
+        content: "\e963" !important;
+      }
+    }
+    .pi-chevron-down{
+      &:before {
+        content: "\e964" !important;
+      }
+    }
+    .p-tree-wrapper{
+      .p-tree-container{
+        position: relative;
+        list-style-type: decimal;
+        padding-left: 18px;
+        .p-treenode-label{
+          flex: 1;
+          > span{
+            display: flex;
+            a{
+              text-decoration: none;
+              margin: 0 0 0 10px;
+            }
+          }
+        }
+        &:before{
+          content: "";
+          height: 100%;
+          width: 1px;
+          background: #ccc;
+          position: absolute;
+          top: 0;
+          left: 40px;
+          z-index: 0;
+        }
+        .p-treenode{
+          .p-treenode-selectable{
+            &:hover {
+              background: transparent !important;
+              color: $secondary !important;
+              button{
+                color: $secondary !important;
+              }
+            }
+          }
+          .p-tree-toggler{
+            background: #fff !important;
+            margin-right: 0 !important;
+          }
+          .p-treenode-children{
+            position: relative;
+            &:before{
+              content: "";
+              height: 100%;
+              width: 1px;
+              background: #ccc;
+              position: absolute;
+              top: 0;
+              left: 39px;
+              z-index: 0;
+            }
+            .p-treenode-leaf{
+              position: relative;
+              &:before{
+                content: "";
+                height: 1px;
+                width: 6px;
+                background: #ccc;
+                position: absolute;
+                top: 48%;
+                left: 24px;
+                z-index: 0;
+              }
+            }
+            .p-treenode-children{
+              position: relative;
+              &:before{
+                content: "";
+                height: 100%;
+                width: 1px;
+                background: #ccc;
+                position: absolute;
+                top: 0;
+                left: 39px;
+                z-index: 0;
+              }
+              .p-treenode-leaf{
+                position: relative;
+                &:before{
+                  content: "";
+                  height: 1px;
+                  width: 6px;
+                  background: #ccc;
+                  position: absolute;
+                  top: 48%;
+                  left: 24px;
+                  z-index: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
