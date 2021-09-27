@@ -28,6 +28,7 @@ import { ReviewHomeSpLeftComponent } from './components/review-home-sp-left/revi
 import { ReviewHomeSpRightComponent } from './components/review-home-sp-right/review-home-sp-right.component';
 import { UsecasedetailsComponent } from './usecasedetails/usecasedetails.component';
 import { NewUseCaseComponent } from './new-use-case/new-use-case.component';
+import { EnterpriseLibraryComponent } from './enterprise-library/enterprise-library.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { NewUseCaseComponent } from './new-use-case/new-use-case.component';
     ReviewHomeSpLeftComponent,
     ReviewHomeSpRightComponent,
     NewUseCaseComponent,
-    UsecasedetailsComponent
+    UsecasedetailsComponent,
+    EnterpriseLibraryComponent
   ],
   imports: [
     BrowserModule,

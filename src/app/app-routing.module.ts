@@ -4,12 +4,14 @@ import { ReviewSelectedComponent } from "./review-selected/review-selected.compo
 import { ReviewHomeComponent } from "./review-home/review-home.component";
 import { NewUseCaseComponent } from './new-use-case/new-use-case.component';
 import { UsecasedetailsComponent } from './usecasedetails/usecasedetails.component';
+import { EnterpriseLibraryComponent } from "./enterprise-library/enterprise-library.component";
 
 const routes: Routes = [
   { path: 'review-home', component: ReviewHomeComponent },
   { path: 'review-selected', component: ReviewSelectedComponent },
-  { path: 'newusecase', component: NewUseCaseComponent },
-  { path: 'usecasedetails', component: UsecasedetailsComponent },
+  { path: 'new-use-case', component: NewUseCaseComponent },
+  { path: 'use-case-details', component: UsecasedetailsComponent },
+  { path: 'enterprise-library', component: EnterpriseLibraryComponent },
 ];
 
 @NgModule({

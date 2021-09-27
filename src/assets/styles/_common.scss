@@ -2,8 +2,24 @@ body{
   background: #f0edf4 !important;
   padding: 0;
 }
-.p-component{
+.p-component, h2, h3, p{
   font-family: $font-family-sans-serif !important;
+}
+h2{
+  font-size: 22px;
+}
+h3{
+  font-size: 18px !important;
+  margin-bottom: 20px !important;
+}
+p{
+  font-size: 14px;
+}
+.pd-t-76{
+  padding-top: 76px;
+}
+mb-0{
+  margin-bottom: 0 !important;
 }
 .text-container{
   padding: 0 20px 20px 20px;
@@ -100,13 +116,27 @@ body{
 
 
 }
-
+.btn-sm{
+  padding: 0.25rem 0 0 0 !important;
+  font-size: 0.775rem !important;
+  margin-right: 8px;
+}
+.align-right{
+  text-align: right;
+  display: block;
+}
 .btn-link{
   text-decoration: none !important;
   color: $secondary !important;
   i{
     position: relative;
     top:2px;
+  }
+}
+td{
+  .btn-link{
+    font-size: 14px;
+    padding: 0 5px;
   }
 }
 
