@@ -1,0 +1,14 @@
+.card-list{
+  height: 72.2vh;
+  overflow: scroll;
+  .card{
+    border-radius: 0 !important;
+    border-bottom: 0 !important;
+    .card-body{
+      min-height: 150px;
+    }
+    .card-header{
+      background: #fff;
+    }
+  }
+}
