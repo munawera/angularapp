@@ -1,24 +1,12 @@
 <div class="container-fluid padding-t-b-20">
   <div class="row">
-    <div class="col-md-9" style="position: relative;">
-      <button class="btn btn-outline-primary add-on-head" (click)="updateList()">Save Tree</button>
+    <div class="col-md-9">
+<!--      <button class="btn btn-outline-primary add-on-head" (click)="updateList()">Save Tree</button>-->
       <p-tabView class="tree-tab-view" [hidden]="show">
         <p-tabPanel header="Untitled Document">
 
-          <p-tree [value]="items">
-            <ng-template let-node  pTemplate="default">
-              <span class="me-auto" (dblclick)="showEditor(node.id, node)" [hidden]="node.id==editItem">{{node.label}}</span>
-              <input class="form-control" type="text" [(ngModel)]="node.label" *ngIf="node.id==editItem" (keydown)="editorKeyDown($event)" (mouseleave)="mouseLeave()">
+          <app-tree-view></app-tree-view>
 
-              <a href="javascript:" (click)="removeItem(node)" title="Remove" class="icon-cancel"></a>
-              <a href="javascript:" (click)="addRoot(node)" title="Add on root" class="icon-add-node"></a>
-              <a href="javascript:" (click)="addChild(node)" title="Add sub root" class="icon-add-sub-node"></a>
-
-              <a href="javascript:">{{node.id}}</a>
-              <a href="javascript:" class="icon-flag-o"></a>
-              <a href="javascript:" class="icon-chat"></a>
-            </ng-template>
-          </p-tree>
         </p-tabPanel>
         <p-tabPanel header="Untitled Document 2">
           Content 2

@@ -31,6 +31,7 @@ import { NewUseCaseComponent } from './new-use-case/new-use-case.component';
 import { EnterpriseLibraryComponent } from './enterprise-library/enterprise-library.component';
 import { ToolsComponent } from './tools/tools.component';
 import { TreeModule } from 'primeng/tree';
+import { TreeViewComponent } from './components/tree-view/tree-view.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { TreeModule } from 'primeng/tree';
     UseCaseDetailsComponent,
     EnterpriseLibraryComponent,
     ToolsComponent,
+    TreeViewComponent,
   ],
   imports: [
     BrowserModule,
