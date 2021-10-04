@@ -2,11 +2,12 @@
   <ng-template let-node  pTemplate="default">
 
     <span class="me-auto" (dblclick)="showEditor(node.id, node)" [hidden]="node.id==editItem">{{node.label}}</span>
-    <input class="form-control" type="text" [(ngModel)]="node.label" *ngIf="node.id==editItem" (keydown)="editorKeyDown($event)" (mouseleave)="mouseLeave()">
-
-    <a href="javascript:" (click)="removeItem(node)" title="Remove" class="icon-cancel"></a>
-    <a href="javascript:" (click)="addRoot(node)" title="Add on root" class="icon-add-node"></a>
-    <a href="javascript:" (click)="addChild(node)" title="Add sub root" class="icon-add-sub-node"></a>
+    <textarea class="form-control"
+              type="text" [(ngModel)]="node.label" *ngIf="node.id==editItem"
+              (keydown)="editorKeyDown($event)" rows="2" (mouseleave)="mouseLeave()"></textarea>
+<!--    <a href="javascript:" (click)="removeItem(node)" title="Remove" class="icon-cancel"></a>-->
+<!--    <a href="javascript:" (click)="addRoot(node)" title="Add on root" class="icon-add-node"></a>-->
+<!--    <a href="javascript:" (click)="addChild(node)" title="Add sub root" class="icon-add-sub-node"></a>-->
 
     <a href="javascript:">{{node.id}}</a>
     <a href="javascript:" class="icon-flag-o"></a>
