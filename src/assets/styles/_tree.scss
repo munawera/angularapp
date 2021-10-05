@@ -26,11 +26,13 @@
       border-color: transparent !important;
     }
   }
+
   .p-tree{
     position: relative;
     border-top:none !important;
     border-radius: 0 !important;
     border-right: 0 !important;
+    min-height: 67vh;
     &:before{
       content: "";
       height: 100%;
@@ -63,6 +65,14 @@
           > span{
             display: flex;
             align-items: center!important;
+            &:hover{
+              .controls{
+                display: block !important;
+              }
+            }
+            .controls{
+              display: none;
+            }
             a{
               text-decoration: none;
               margin: 0 0 0 10px;

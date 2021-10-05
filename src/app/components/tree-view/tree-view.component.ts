@@ -31,10 +31,6 @@ export class TreeViewComponent {
 
   constructor() {}
 
-  // updateList(){
-  //   console.log(this.items);
-  // }
-
   showEditor(item: any, itemList: any){
     this.editItem = item;
     this.itemList = itemList;
@@ -50,9 +46,11 @@ export class TreeViewComponent {
 
   removeItem(itemList: any) {
     if(itemList.parent){
-      let index = itemList.children.indexOf(itemList);
+      let index = itemList.parent.children.indexOf(itemList);
       itemList?.parent.children.splice(index,1)
+      console.log('hello 1');
     } else {
+      console.log('hello 2');
       let index = this.items.indexOf(itemList);
       this.items?.splice(index,1)
     }
@@ -64,7 +62,9 @@ export class TreeViewComponent {
   }
 
   mouseLeave() {
-    this.editItem = '';
+    setTimeout(() =>{
+      this.editItem = '';
+    },1000);
     this.firstKey = [];
   }
 
@@ -74,15 +74,15 @@ export class TreeViewComponent {
       switch (this.firstKey[0] + this.firstKey[1]) {
         case 17 + 13: // Add Root
           this.addRoot(this.itemList);
-          console.log('control + Enter');
+          this.firstKey = [];
           break;
         case 17 + 81: // Add Sub Root
           this.addChild(this.itemList);
-          console.log('control + Q');
+          this.firstKey = [];
           break;
         case 17 + 68: // Delete
           this.removeItem(this.itemList)
-          console.log('control + D');
+          this.firstKey = [];
           break;
       }
     }
