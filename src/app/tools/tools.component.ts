@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class ToolsComponent {
   public show = false;
+  public isShowFull = true;
   constructor() {}
 }

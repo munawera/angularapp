@@ -2,8 +2,6 @@
 .tree-tab-view{
   .p-tabview-panels{
     padding: 0 !important;
-    max-height: 67vh;
-    overflow: scroll;
   }
   input{
     border-color: transparent !important;
@@ -26,13 +24,38 @@
       border-color: transparent !important;
     }
   }
-
+  .tree-tools{
+    display: block;
+    background: $primary;
+    ul{
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      text-align: right;
+      width: 100%;
+      li{
+        display: inline-block;
+        a{
+          display: inline-block;
+          color: $white;
+          padding: 8px 14px 2px 14px;
+          text-decoration: none;
+          font-size: 23px;
+          &:hover{
+            background: $secondary;
+          }
+        }
+      }
+    }
+  }
   .p-tree{
     position: relative;
     border-top:none !important;
     border-radius: 0 !important;
     border-right: 0 !important;
-    min-height: 67vh;
+    min-height: 61.5vh;
+    max-height: 61.5vh;
+    overflow: scroll;
     &:before{
       content: "";
       height: 100%;
@@ -62,6 +85,7 @@
         .p-treenode-label{
           flex: 1;
           font-size: 14px;
+          color: $secondary;
           > span{
             display: flex;
             align-items: center!important;
@@ -114,6 +138,7 @@
             z-index: 0;
           }
         }
+
         .p-treenode{
           padding: 5px 0.25rem !important;
           .p-treenode-content{
@@ -182,6 +207,11 @@
               }
             }
           }
+        }
+      }
+      .p-treenode-children{
+        .p-treenode-label{
+          color: $danger;
         }
       }
     }

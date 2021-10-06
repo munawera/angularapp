@@ -1,13 +1,26 @@
+<div class="tree-tools">
+  <ul>
+    <li>
+      <a href="javascript:" title="Add on root" (click)="addRoot('')"><i class="icon-add-node"></i></a>
+    </li>
+    <li>
+      <a href="javascript:" title="Add sub root" (click)="addChild('')"><i class="icon-add-sub-node"></i></a>
+    </li>
+    <li>
+      <a href="javascript:" title="Remove" (click)="removeItem('')"><i class="icon-cancel"></i></a>
+    </li>
+  </ul>
+</div>
 <p-tree [value]="items">
   <ng-template let-node  pTemplate="default">
 
-    <span class="me-auto" (dblclick)="showEditor(node.id, node)" [hidden]="node.id==editItem">{{node.label + '-' + node.id}}</span>
+    <span class="me-auto" (dblclick)="showEditor(node.id, node)" (click)="selectItem(node)" [hidden]="node.id==editItem">{{node.label + '-' + node.id}}</span>
     <textarea class="form-control"
               type="text" [(ngModel)]="node.label + '-' + node.id" *ngIf="node.id==editItem"
-              (keydown)="editorKeyDown($event)" rows="2" (mouseleave)="mouseLeave()"></textarea>
-    <a href="javascript:" (click)="removeItem(node)" title="Remove" class="controls icon-cancel"></a>
-    <a href="javascript:" (click)="addRoot(node)" title="Add on root" class="controls icon-add-node"></a>
-    <a href="javascript:" (click)="addChild(node)" title="Add sub root" class="controls icon-add-sub-node"></a>
+              (keyup)="editorKeyDown($event)" rows="2" (mouseleave)="mouseLeave()"></textarea>
+<!--    <a href="javascript:" (click)="removeItem(node)" title="Remove" class="controls icon-cancel"></a>-->
+<!--    <a href="javascript:" (click)="addRoot(node)" title="Add on root" class="controls icon-add-node"></a>-->
+<!--    <a href="javascript:" (click)="addChild(node)" title="Add sub root" class="controls icon-add-sub-node"></a>-->
 
     <a href="javascript:">{{node.id}}</a>
     <a href="javascript:" class="icon-flag-o"></a>
