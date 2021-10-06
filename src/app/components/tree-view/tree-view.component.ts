@@ -69,9 +69,9 @@ export class TreeViewComponent {
 
 
   mouseLeave() {
-    // setTimeout(() =>{
-    //   this.editItem = '';
-    // },700);
+    setTimeout(() =>{
+      this.editItem = '';
+    },700);
     this.firstKey = [];
   }
 
