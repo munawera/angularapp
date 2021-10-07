@@ -37,6 +37,9 @@
             font-size: 12px;
             margin-left: 5px;
           }
+          &:hover{
+            background: darken($primary, 3%);
+          }
         }
       }
       .dropdown-menu{
