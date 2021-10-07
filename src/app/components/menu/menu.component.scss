@@ -1,6 +1,21 @@
 @import "../../../assets/styles/functions";
 @import "../../../assets/styles/variables";
 .nav{
+  &.separator{
+    margin-left: 60px;
+    position: relative;
+    &:before{
+      content: "";
+      width: 1px;
+      display: inline-block;
+      position: absolute;
+      height: 62%;
+      background: #d7d5dc;
+      left: -28px;
+      top: 20%;
+    }
+  }
+  display: inline-flex;
   li{
     border: 0 !important;
     padding: 0 !important;
@@ -21,6 +36,9 @@
       color: $gray-500;
       cursor: pointer;
       border-bottom: 2px transparent solid;
+      word-break: break-word;
+      max-width: 100px;
+      height: 100%;
       &:hover{
         background: $gray-200 !important;
         color: $secondary !important;

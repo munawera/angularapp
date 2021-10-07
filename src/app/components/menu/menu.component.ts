@@ -7,7 +7,7 @@ import {MenuItem} from 'primeng/api';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-
+  activeIndex: number = 0;
   items: MenuItem[] = [];
   items2: MenuItem[] = [];
   itemsTabs: MenuItem[] = [];
