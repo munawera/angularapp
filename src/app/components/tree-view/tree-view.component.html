@@ -14,9 +14,9 @@
 <p-tree [value]="items">
   <ng-template let-node  pTemplate="default">
 
-    <span class="me-auto" (dblclick)="showEditor(node.id, node)" (click)="selectItem(node)" [hidden]="node.id==editItem">{{node.label + '-' + node.id}}</span>
+    <span class="me-auto" (dblclick)="showEditor(node.id, node)" (click)="selectItem(node)" [hidden]="node.id==editItem">{{node.label}}</span>
     <textarea class="form-control"
-              type="text" [(ngModel)]="node.label + '-' + node.id" *ngIf="node.id==editItem"
+              type="text" [(ngModel)]="node.label" *ngIf="node.id==editItem"
               (keydown.control.q)="addChild('')"
               (keydown.control.enter)="addRoot('')"
               (keydown.control.d)="removeItem('')"

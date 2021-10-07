@@ -8,7 +8,7 @@
   position: relative;
   .close-panel{
     text-decoration: none;
-    color: $white;
+    color: $primary;
     position: absolute;
     right: 10px;
     top: 10px;
@@ -21,9 +21,10 @@
       min-height: 150px;
     }
     .card-header{
-      background: $primary;
+      background: linear-gradient(
+          180deg, #fcfcfc 0%, #eeeeee 100%) !important;
       border-radius: 0;
-      color: $white;
+      color: $primary;
     }
   }
 }

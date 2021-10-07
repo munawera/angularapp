@@ -16,7 +16,7 @@
         </p-tabPanel>
       </p-tabView>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3" [ngClass]="{'col-md-3': isShowFull, 'd-none': !isShowFull}">
       <div class="card-list">
         <a href="javascript:" class="close-panel" (click)="isShowFull = !isShowFull"><i class="icon-cancel"></i></a>
         <div class="card">
