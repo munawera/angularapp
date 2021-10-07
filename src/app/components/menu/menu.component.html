@@ -106,13 +106,13 @@
     </nav>
     <nav class="nav separator">
       <li>
-        <a class="nav-link" ><i class="icon-add-node"></i><span>New Requirement</span></a>
+        <a class="nav-link" (click)="treeViewService.addRoot('')"><i class="icon-add-node"></i><span>New Requirement</span></a>
       </li>
       <li>
-        <a class="nav-link" ><i class="icon-add-sub-node"></i><span>Add child Requirement</span></a>
+        <a class="nav-link" (click)="treeViewService.addChild('')"><i class="icon-add-sub-node"></i><span>Add child Requirement</span></a>
       </li>
       <li>
-        <a class="nav-link" ><i class="icon-delete-2"></i><span>Delete Requirement</span></a>
+        <a class="nav-link" (click)="treeViewService.removeItem('')"><i class="icon-delete-2"></i><span>Delete Requirement</span></a>
       </li>
     </nav>
   </p-tabPanel>

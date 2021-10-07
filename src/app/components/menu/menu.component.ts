@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
+import { TreeViewService } from "../../services/tree-view.service";
 
 @Component({
   selector: 'app-menu',
@@ -15,7 +16,7 @@ export class MenuComponent implements OnInit {
   activeItem: MenuItem | undefined;
   value: string | undefined;
   menu: boolean = false;
-  constructor() {}
+  constructor(public treeViewService: TreeViewService) {}
 
   ngOnInit(): void {
     this.items = [
