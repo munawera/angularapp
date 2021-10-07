@@ -1,20 +1,11 @@
-<!--<div class="tree-tools">-->
-<!--  <ul>-->
-<!--    <li>-->
-<!--      <a href="javascript:" title="Add on root" (click)="addRoot('')"><i class="icon-add-node"></i></a>-->
-<!--    </li>-->
-<!--    <li>-->
-<!--      <a href="javascript:" title="Add sub root" (click)="addChild('')"><i class="icon-add-sub-node"></i></a>-->
-<!--    </li>-->
-<!--    <li>-->
-<!--      <a href="javascript:" title="Remove" (click)="removeItem('')"><i class="icon-cancel"></i></a>-->
-<!--    </li>-->
-<!--  </ul>-->
-<!--</div>-->
 <p-tree [value]="treeViewService.items">
   <ng-template let-node  pTemplate="default">
 
-    <span class="me-auto" (dblclick)="treeViewService.showEditor(node.id, node)" (click)="treeViewService.selectItem(node)" [hidden]="node.id==treeViewService.editItem">{{node.label}}</span>
+    <span class="me-auto"
+          (dblclick)="treeViewService.showEditor(node.id, node)"
+          (click)="treeViewService.selectItem(node)"
+          [ngClass]="{'selected': treeViewService.isSelect}"
+          [hidden]="node.id==treeViewService.editItem">{{node.label}}</span>
     <textarea class="form-control"
               type="text" [(ngModel)]="node.label" *ngIf="node.id==treeViewService.editItem"
               (keydown.control.q)="treeViewService.addChild('')"
@@ -22,10 +13,6 @@
               (keydown.control.d)="treeViewService.removeItem('')"
               (keydown.enter)="treeViewService.editItem = ''"
               rows="2"></textarea>
-<!--    (keydown)="editItem = ''"-->
-<!--    <a href="javascript:" (click)="removeItem(node)" title="Remove" class="controls icon-cancel"></a>-->
-<!--    <a href="javascript:" (click)="addRoot(node)" title="Add on root" class="controls icon-add-node"></a>-->
-<!--    <a href="javascript:" (click)="addChild(node)" title="Add sub root" class="controls icon-add-sub-node"></a>-->
 
     <a href="javascript:">{{node.id}}</a>
     <a href="javascript:" class="icon-flag-o"></a>

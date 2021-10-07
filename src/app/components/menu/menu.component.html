@@ -65,13 +65,21 @@
 
     <ul class="navbar-nav web">
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="pi pi-fw pi-refresh"></i></a>
+        <a class="nav-link" href="javascript:"><i class="pi pi-fw pi-refresh"></i></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="pi pi-fw pi-comment"></i></a>
+        <a class="nav-link" href="javascript:"><i class="pi pi-fw pi-comment"></i></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="pi pi-fw pi-user-plus"></i></a>
+      <li class="nav-item dropdown" [ngClass]="{'show': userDropdown}" (clickOutside)="onClickedOutside($event)">
+        <a class="nav-link" href="javascript:" (click)="userDropdown = !userDropdown">
+          <i class="pi pi-fw pi-user-plus"></i>
+          <i class="icon-caret-down-two"></i>
+        </a>
+        <div class="dropdown-menu" [ngClass]="{'show': userDropdown}">
+          <a class="dropdown-item" href="javascript:"><i class="icon-user"></i> Profile</a>
+          <a class="dropdown-item" href="javascript:"><i class="icon-cog"></i> Setting</a>
+          <a class="dropdown-item" href="javascript:"><i class="icon-log-out"></i> Logout</a>
+        </div>
       </li>
     </ul>
   </div>
@@ -106,7 +114,8 @@
     </nav>
     <nav class="nav separator">
       <li>
-        <a class="nav-link" (click)="treeViewService.addRoot('')"><i class="icon-add-node"></i><span>New Requirement</span></a>
+
+        <a class="nav-link" [ngClass]="{'disabled': !treeViewService.itemSelect}" (click)="treeViewService.addRoot('')"><i class="icon-add-node"></i><span>New Requirement</span></a>
       </li>
       <li>
         <a class="nav-link" (click)="treeViewService.addChild('')"><i class="icon-add-sub-node"></i><span>Add child Requirement</span></a>

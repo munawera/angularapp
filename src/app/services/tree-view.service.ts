@@ -24,11 +24,14 @@ export class TreeViewService {
   ];
   public editItem: any = null;
   public itemList: any = null;
+  public itemSelect: any = false;
+  public isSelect: any = false;
   constructor() { }
 
   selectItem(itemList: any){
-    console.log(itemList)
+    this.isSelect = true;
     this.itemList = itemList;
+    this.itemSelect = true;
   }
   showEditor(item: any, itemList: any){
     this.editItem = item;

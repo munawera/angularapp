@@ -16,6 +16,7 @@ export class MenuComponent implements OnInit {
   activeItem: MenuItem | undefined;
   value: string | undefined;
   menu: boolean = false;
+  userDropdown: boolean = false;
   constructor(public treeViewService: TreeViewService) {}
 
   ngOnInit(): void {
@@ -56,6 +57,11 @@ export class MenuComponent implements OnInit {
 
   clickEvent() {
     this.menu = !this.menu;
+  }
+
+  onClickedOutside(e: Event){
+    console.log('Clicked outside:', e);
+    this.userDropdown = false;
   }
 
 }

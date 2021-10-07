@@ -32,6 +32,7 @@ import { EnterpriseLibraryComponent } from './enterprise-library/enterprise-libr
 import { ToolsComponent } from './tools/tools.component';
 import { TreeModule } from 'primeng/tree';
 import { TreeViewComponent } from './components/tree-view/tree-view.component';
+import { ClickOutsideModule } from 'ng-click-outside';
 
 
 @NgModule({
@@ -69,7 +70,8 @@ import { TreeViewComponent } from './components/tree-view/tree-view.component';
     DropdownModule,
     InputTextareaModule,
     CardModule,
-    TreeModule
+    TreeModule,
+    ClickOutsideModule
   ],
   providers: [],
   bootstrap: [AppComponent]
