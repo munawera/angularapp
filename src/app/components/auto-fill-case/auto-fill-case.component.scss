@@ -1,0 +1,127 @@
+@import "../../../assets/styles/functions";
+@import "../../../assets/styles/variables";
+
+.auto_fill_case{
+  width: 600px;
+  min-height: 180px;
+  position: absolute;
+  background: #f4f8f9;
+  top: 28px;
+  left: 0;
+  padding: 0;
+  z-index: 99;
+  border: 1px #d7d7d7 solid;
+  border-radius: 5px;
+  overflow: hidden;
+  .white_case{
+    width: 100%;
+    background: #fff;
+    display: inline-block;
+    padding: 15px 15px 10px;
+    color: #555555;
+    line-height: 21px;
+    position: relative;
+    border-left: 1px #d7d7d7 solid;
+    i{
+      position: absolute;
+      right: 6px;
+      top: 6px;
+      cursor: pointer;
+      &:hover{
+        color: $secondary !important;
+      }
+    }
+    p{
+      margin-bottom: 10px;
+      b{
+        margin-bottom: 10px;
+        display: inline-block;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .light-gray{
+    position: relative;
+    i.icon-cancel{
+      position: absolute;
+      right: 3px;
+      top: -9px;
+      color: #555555;
+      cursor: pointer;
+      &:hover{
+        color: $secondary !important;
+      }
+    }
+    .head{
+      border-bottom: 1px #d7d7d7 solid !important;
+      display: inline-block;
+      width: calc(100% + 24px);
+      .form-control{
+        margin: 10px;
+        border: 1px #d7d7d7 solid !important;
+        border-radius: 15px !important;
+        min-height: 30px;
+        padding: 0 10px !important;
+        line-height: 10px;
+      }
+      .btn-link {
+        padding: 11px 12px;
+        color: #555555 !important;
+        &:hover{
+          color: $secondary !important;
+          i{
+            color: $secondary !important;
+          }
+        }
+        i{
+          color: #555555;
+        }
+      }
+    }
+    .box{
+      height: 120px;
+      overflow-y: scroll;
+      display: inline-block;
+      width: calc(100% + 20px);
+      padding: 10px 0 0 0;
+      ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+          margin: 2px 15px 2px 10px;
+          text-align: right;
+          a{
+            font-size: 14px;
+            color:$secondary;
+            float: left;
+            margin: 0;
+            i{
+              color: $primary;
+              font-size: 15px;
+              position: relative;
+              top: 3px;
+              margin-right: 3px;
+            }
+            &:hover{
+              color: $primary !important;
+            }
+          }
+          i{
+            color: $primary;
+            font-size: 17px;
+            position: relative;
+            top: 3px;
+            margin: 0 2px;
+            cursor: pointer;
+            &:hover{
+              color: $secondary !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

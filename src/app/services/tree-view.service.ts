@@ -26,17 +26,27 @@ export class TreeViewService {
   public itemList: any = null;
   public itemSelect: any = false;
   public isSelect: any = false;
+  public isShowFull: any = true;
+  public isShowId: any = false;
+  public isAutoFill: any = true;
   constructor() { }
 
   selectItem(itemList: any){
     this.isSelect = true;
     this.itemList = itemList;
     this.itemSelect = true;
+    console.log(this.itemList.id);
   }
   showEditor(item: any, itemList: any){
     this.editItem = item;
     // this.itemList = itemList;
   }
+
+  controlEnter() {
+    this.editItem = ''
+    this.isAutoFill = true;
+  }
+
   addRoot(itemList: any){
     itemList = this.itemList;
     let id = String(Math.floor(1000 + Math.random() * 9000));
@@ -60,5 +70,12 @@ export class TreeViewService {
       let index = this.items.indexOf(itemList);
       this.items?.splice(index,1)
     }
+  }
+  openAutoFillCase() {
+    this.isAutoFill = false;
+  }
+  closeAutoFill() {
+    this.editItem = ''
+    this.isAutoFill = true;
   }
 }

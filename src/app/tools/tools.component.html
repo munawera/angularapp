@@ -1,75 +1,69 @@
 <div class="container-fluid padding-t-b-20">
   <div class="row">
+    <div class="col-md-9" style="position: relative;" [ngClass]="{'col-md-9': treeViewService.isShowFull, 'col-md-12': !treeViewService.isShowFull}">
+      <!--      <button class="btn btn-outline-primary add-on-head" (click)="updateList()">Save Tree</button>-->
+      <p-tabView class="tree-tab-view" [hidden]="show">
+        <p-tabPanel header="Untitled Document">
 
-    <p-splitter [style]="{'height': '100%'}" [panelSizes]="[75,25]" class="web-splitter">
-      <ng-template pTemplate>
-        <div class="col-md-12">
-          <!--      <button class="btn btn-outline-primary add-on-head" (click)="updateList()">Save Tree</button>-->
-          <p-tabView class="tree-tab-view" [hidden]="show">
-            <p-tabPanel header="Untitled Document">
+          <app-tree-view></app-tree-view>
 
-              <app-tree-view></app-tree-view>
+        </p-tabPanel>
+        <p-tabPanel header="Untitled Document 2">
+          Content 2
+        </p-tabPanel>
+        <p-tabPanel header="Untitled Document 3">
+          Content 3
+        </p-tabPanel>
+      </p-tabView>
 
-            </p-tabPanel>
-            <p-tabPanel header="Untitled Document 2">
-              Content 2
-            </p-tabPanel>
-            <p-tabPanel header="Untitled Document 3">
-              Content 3
-            </p-tabPanel>
-          </p-tabView>
-        </div>
-      </ng-template>
-      <ng-template pTemplate>
-        <div class="col-md-12">
-          <div class="card-list">
-            <a href="javascript:" class="close-panel" (click)="isShowFull = !isShowFull"><i class="icon-cancel"></i></a>
-            <div class="card">
-              <div class="card-header">Specs</div>
-              <div class="card-body">
-                <p class="card-text">
-                  Some quick example text to build on the card
-                  title and make up the bulk of the card's content.
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">Version</div>
-              <div class="card-body">
-                <p-table [value]="products2" styleClass="p-datatable-gridlines p-datatable-striped head-style-2" responsiveLayout="scroll">
-
-                  <ng-template pTemplate="header">
-                    <tr>
-                      <th>ID</th>
-                      <th>Title</th>
-                      <th>Specification Name</th>
-                      <th>Type</th>
-                    </tr>
-                  </ng-template>
-                  <ng-template pTemplate="body" let-product>
-                    <tr>
-                      <td>{{product.id}}</td>
-                      <td>{{product.name}}</td>
-                      <td>{{product.s_name}}</td>
-                      <td>{{product.type}}</td>
-                    </tr>
-                  </ng-template>
-                </p-table>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">Comments</div>
-              <div class="card-body">
-                <p class="card-text">
-                  Some quick example text to build on the card
-                  title and make up the bulk of the card's content.
-                </p>
-              </div>
-            </div>
+      <app-save-specs-modal></app-save-specs-modal>
+    </div>
+    <div class="col-md-3" [ngClass]="{'col-md-3': treeViewService.isShowFull, 'd-none': !treeViewService.isShowFull}">
+      <div class="card-list">
+        <a href="javascript:" class="close-panel" (click)="treeViewService.isShowFull = !treeViewService.isShowFull"><i class="icon-cancel"></i></a>
+        <div class="card">
+          <div class="card-header">Specs</div>
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card
+              title and make up the bulk of the card's content.
+            </p>
           </div>
         </div>
-      </ng-template>
-    </p-splitter>
+        <div class="card">
+          <div class="card-header">Version</div>
+          <div class="card-body">
+            <p-table [value]="products" styleClass="p-datatable-gridlines p-datatable-striped head-style-2" responsiveLayout="scroll">
 
+              <ng-template pTemplate="header">
+                <tr>
+                  <th>ID</th>
+                  <th>Title</th>
+                  <th>Specification Name</th>
+                  <th>Type</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-product>
+                <tr>
+                  <td>{{product.id}}</td>
+                  <td>{{product.name}}</td>
+                  <td>{{product.s_name}}</td>
+                  <td>{{product.type}}</td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">Comments</div>
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card
+              title and make up the bulk of the card's content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

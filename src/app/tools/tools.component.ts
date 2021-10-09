@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {TreeViewService} from "../services/tree-view.service";
 
 @Component({
   selector: 'app-tools',
@@ -7,8 +8,7 @@ import { Component } from '@angular/core';
 })
 export class ToolsComponent {
   public show = false;
-  public isShowFull = true;
-  products2: any = [
+  public products: any = [
     {
       "id": "1000",
       "date": "12/09/2020",
@@ -141,5 +141,5 @@ export class ToolsComponent {
       "created-by": "Muhammad Ali"
     }
   ];
-  constructor() {}
+  constructor(public treeViewService: TreeViewService) {}
 }

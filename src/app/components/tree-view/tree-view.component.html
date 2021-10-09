@@ -4,21 +4,19 @@
     <span class="me-auto"
           (dblclick)="treeViewService.showEditor(node.id, node)"
           (click)="treeViewService.selectItem(node)"
-          [ngClass]="{'selected': treeViewService.isSelect}"
+          [ngClass]="{'selected': treeViewService.itemList?.id === node.id}"
           [hidden]="node.id==treeViewService.editItem">{{node.label}}</span>
-    <textarea class="form-control"
-              type="text" [(ngModel)]="node.label" *ngIf="node.id==treeViewService.editItem"
-              (keydown.control.q)="treeViewService.addChild('')"
-              (keydown.control.enter)="treeViewService.addRoot('')"
-              (keydown.control.d)="treeViewService.removeItem('')"
-              (keydown.enter)="treeViewService.editItem = ''"
-              rows="2"></textarea>
+    <input class="form-control"
+           type="text" [(ngModel)]="node.label" *ngIf="node.id==treeViewService.editItem"
+           (keydown.control.q)="treeViewService.addChild('')"
+           (keydown.control.enter)="treeViewService.addRoot('')"
+           (keydown.control.d)="treeViewService.removeItem('')"
+           (keydown.control.shift.s)="treeViewService.openAutoFillCase()"
+           (keydown.enter)="treeViewService.controlEnter()">
 
-<!--    <div class="test_modal" *ngIf="node.id == treeViewService.itemList.id">-->
-<!--      Test-->
-<!--    </div>-->
+    <app-auto-fill-case [hidden]="treeViewService.isAutoFill" *ngIf="treeViewService?.itemList?.id == node.id"></app-auto-fill-case>
 
-    <a href="javascript:">{{node.id}}</a>
+    <a href="javascript:" [hidden]="treeViewService.isShowId">{{node.id}}</a>
     <a href="javascript:" class="icon-flag-o"></a>
     <a href="javascript:" class="icon-chat"></a>
 

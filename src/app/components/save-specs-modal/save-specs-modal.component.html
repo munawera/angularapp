@@ -1,0 +1,24 @@
+<div class="saved-specs">
+  <p-tabView class="tab-view-mobile menu-tab-view">
+
+    <p-tabPanel header="General">
+      <div class="form-group">
+        <label>Priority</label>
+        <p-dropdown [options]="states" [(ngModel)]="selectedState" placeholder="Select Project" optionLabel="name"></p-dropdown>
+      </div>
+    </p-tabPanel>
+
+    <p-tabPanel header="System Impacts">
+      System impacts
+    </p-tabPanel>
+
+    <p-tabPanel header="Glossary">
+      Glossary
+    </p-tabPanel>
+
+    <p-tabPanel header="Attachment">
+      Attachment
+    </p-tabPanel>
+
+  </p-tabView>
+</div>

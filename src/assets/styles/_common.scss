@@ -156,7 +156,40 @@ td{
   border: 1px #e1e1e1 solid;
 }
 
-
+.saved-specs{
+  .p-tabview-nav{
+    border-width: 0 !important;
+    li{
+      margin: 0 7.3px 0 0 !important;
+      a{
+        background: #dde7ec !important;
+        color: #5e5e5e !important;
+        text-transform: uppercase;
+        font-size: 14px;
+        border-radius: 5px 5px 0 0 !important;
+        border-width: 0 !important;
+        &:hover{
+          background: $secondary !important;
+          color: $white !important;
+        }
+      }
+      &.p-highlight{
+        a{
+          background: $secondary !important;
+          color: $white !important;
+        }
+      }
+      &.p-tabview-ink-bar{
+        display: none !important;
+      }
+    }
+  }
+  .p-tabview-panels{
+    background: #f4f8f9 !important;
+    min-height: 435px;
+    border: 1px $secondary solid !important;
+  }
+}
 
 
 

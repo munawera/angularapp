@@ -33,6 +33,8 @@ import { ToolsComponent } from './tools/tools.component';
 import { TreeModule } from 'primeng/tree';
 import { TreeViewComponent } from './components/tree-view/tree-view.component';
 import { ClickOutsideModule } from 'ng-click-outside';
+import { AutoFillCaseComponent } from './components/auto-fill-case/auto-fill-case.component';
+import { SaveSpecsModalComponent } from './components/save-specs-modal/save-specs-modal.component';
 
 
 @NgModule({
@@ -51,6 +53,8 @@ import { ClickOutsideModule } from 'ng-click-outside';
     EnterpriseLibraryComponent,
     ToolsComponent,
     TreeViewComponent,
+    AutoFillCaseComponent,
+    SaveSpecsModalComponent,
   ],
   imports: [
     BrowserModule,

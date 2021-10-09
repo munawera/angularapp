@@ -60,7 +60,6 @@ export class MenuComponent implements OnInit {
   }
 
   onClickedOutside(e: Event){
-    console.log('Clicked outside:', e);
     this.userDropdown = false;
   }
 

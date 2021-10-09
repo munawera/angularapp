@@ -1,12 +1,7 @@
-.test_modal{
-  width: 300px;
-  height: 200px;
-  display: none;
-  position: absolute;
-  background: #e2e0e7;
-  top: 0;
-  left: 200px;
-}
-.selected + .test_modal{
-  display: inline-block;
+@import "../../../assets/styles/functions";
+@import "../../../assets/styles/variables";
+
+
+.selected + .auto_fill_case{
+  // display: inline-block;
 }

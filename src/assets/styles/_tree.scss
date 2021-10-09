@@ -78,10 +78,12 @@
       }
     }
     .p-tree-wrapper{
+      overflow: visible;
       .p-tree-container{
         position: relative;
         list-style-type: decimal;
         padding-left: 18px;
+        overflow: visible;
         .p-treenode-label{
           flex: 1;
           font-size: 14px;
@@ -89,6 +91,7 @@
           > span{
             display: flex;
             align-items: center!important;
+            position: relative;
             &:hover{
               .controls{
                 display: block !important;

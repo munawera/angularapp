@@ -79,6 +79,10 @@
           <a class="dropdown-item" href="javascript:"><i class="icon-user"></i> Profile</a>
           <a class="dropdown-item" href="javascript:"><i class="icon-cog"></i> Setting</a>
           <a class="dropdown-item" href="javascript:"><i class="icon-log-out"></i> Logout</a>
+
+          <a class="dropdown-item" href="javascript:" routerLink="review-home"><i class="icon-cog"></i> Review Home</a>
+          <a class="dropdown-item" href="javascript:" routerLink="review-selected"><i class="icon-cog"></i> Review Selected</a>
+          <a class="dropdown-item" href="javascript:" routerLink="tools"><i class="icon-cog"></i> Editor</a>
         </div>
       </li>
     </ul>
@@ -90,25 +94,25 @@
 
   <p-tabPanel header="Home">
     <nav class="nav">
-      <li routerLinkActive="active">
-        <a class="nav-link" routerLink="review-home"><i class="icon-add-2"></i><span>New Specs</span></a>
+      <li>
+        <a class="nav-link"><i class="icon-add-2"></i><span>New Specs</span></a>
       </li>
-      <li routerLinkActive="active">
-        <a class="nav-link" routerLink="tools"><i class="icon-calendar-1"></i><span>Open Specs</span></a>
+      <li>
+        <a class="nav-link" (click)="treeViewService.isShowFull = true;"><i class="icon-calendar-1"></i><span>Open Specs</span></a>
       </li>
-      <li routerLinkActive="active">
-        <a class="nav-link" routerLink="review-selected"><i class="icon-file"></i><span>Save Specs</span></a>
+      <li>
+        <a class="nav-link"><i class="icon-file"></i><span>Save Specs</span></a>
       </li>
-      <li routerLinkActive="active">
-        <a class="nav-link" ><i class="icon-import"></i><span>Exclude From Project</span></a>
+      <li>
+        <a class="nav-link"><i class="icon-import"></i><span>Exclude From Project</span></a>
       </li>
-      <li routerLinkActive="active">
+      <li>
         <a class="nav-link" ><i class="icon-before-after"></i><span>Save As</span></a>
       </li>
-      <li routerLinkActive="active">
+      <li>
         <a class="nav-link" ><i class="icon-driver-license"></i><span>Check In Specs</span></a>
       </li>
-      <li routerLinkActive="active">
+      <li>
         <a class="nav-link" ><i class="icon-diagnostic"></i><span>Check Out Specs</span></a>
       </li>
     </nav>
@@ -143,8 +147,8 @@
       <li routerLinkActive="active">
         <a class="nav-link" ><i class="icon-before-after"></i><span>Compare Specs</span></a>
       </li>
-      <li routerLinkActive="active">
-        <a class="nav-link" ><i class="icon-driver-license"></i><span>View Object ID</span></a>
+      <li>
+        <a class="nav-link" (click)="treeViewService.isShowId = !treeViewService.isShowId"><i class="icon-driver-license"></i><span>View Object ID</span></a>
       </li>
       <li routerLinkActive="active">
         <a class="nav-link" ><i class="icon-diagnostic"></i><span>View History</span></a>
