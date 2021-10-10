@@ -1,18 +1,11 @@
-
 .tree-tab-view{
-  .p-tabview-panels{
+  .p-tabview-panels {
     padding: 0 !important;
   }
   input{
     border-color: transparent !important;
     padding: 0 5px !important;
     width: 90%;
-    &:focus{
-      // border-color: #ced4da !important;
-    }
-    &:hover{
-      // border-color: transparent !important;
-    }
   }
   .form-control[readonly]{
     padding: 0 !important;

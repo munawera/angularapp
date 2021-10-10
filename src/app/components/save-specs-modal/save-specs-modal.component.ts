@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TreeViewService} from "../../services/tree-view.service";
 
 @Component({
   selector: 'app-save-specs-modal',
@@ -14,7 +15,7 @@ export class SaveSpecsModalComponent implements OnInit {
     { name: "Ohio", code: "Ohio" },
     { name: "Washington", code: "Washington" }
   ];
-  constructor() { }
+  constructor(public treeViewService: TreeViewService) { }
 
   ngOnInit(): void {
   }

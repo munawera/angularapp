@@ -10,11 +10,26 @@
   right: 110px;
   border: 1px #d7d7d7 solid;
   border-radius: 6px;
-  overflow: hidden;
+  overflow-y: scroll;
   padding: 10px;
   height: 89%;
   box-shadow: 0 0 5px #c6c5cc;
-  .p-tabview-panels{
-    background: #0dcaf0;
+  .tab-container{
+    padding: 1.5rem;
+    .form-group {
+      margin-bottom: 8px;
+    }
+    label{
+      font-size: 16px;
+    }
+
+    label.mt-6{
+      margin-top: 6px;
+    }
+    .btn{
+      margin: 0 2px;
+      width: 110px;
+      text-transform: uppercase;
+    }
   }
 }

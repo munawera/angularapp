@@ -2,14 +2,84 @@
   <p-tabView class="tab-view-mobile menu-tab-view">
 
     <p-tabPanel header="General">
-      <div class="form-group">
-        <label>Priority</label>
-        <p-dropdown [options]="states" [(ngModel)]="selectedState" placeholder="Select Project" optionLabel="name"></p-dropdown>
+      <div class="tab-container">
+        <div class="form-group row">
+          <div class="col-md-3"><label>ID</label></div>
+          <div class="col-md-7">
+            <label>{{treeViewService.itemList?.id}}</label>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-3"><label class="mt-6">Priority</label></div>
+          <div class="col-md-7">
+            <p-dropdown [options]="states" [(ngModel)]="selectedState" placeholder="ComboBox" optionLabel="name"></p-dropdown>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-3"><label class="mt-6">State</label></div>
+          <div class="col-md-7">
+            <p-dropdown [options]="states" [(ngModel)]="selectedState" placeholder="ComboBox" optionLabel="name"></p-dropdown>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-3"><label class="mt-6">Type</label></div>
+          <div class="col-md-7">
+            <p-dropdown [options]="states" [(ngModel)]="selectedState" placeholder="ComboBox" optionLabel="name"></p-dropdown>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-3"><label class="mt-6">Area</label></div>
+          <div class="col-md-7">
+            <p-dropdown [options]="states" [(ngModel)]="selectedState" placeholder="ComboBox" optionLabel="name"></p-dropdown>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-3"><label class="mt-6">Iteration</label></div>
+          <div class="col-md-7">
+            <p-dropdown [options]="states" [(ngModel)]="selectedState" placeholder="ComboBox" optionLabel="name"></p-dropdown>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-3"><label class="mt-6">Assigned to</label></div>
+          <div class="col-md-7">
+            <p-dropdown [options]="states" [(ngModel)]="selectedState" placeholder="ComboBox" optionLabel="name"></p-dropdown>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-md-12"><label class="mt-6">Description</label></div>
+          <div class="col-md-12">
+            <textarea name="desc" class="form-control" id="desc" rows="5"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <button type="button" class="btn btn-outline-primary">Save</button>
+            <button type="button" class="btn btn-outline-primary">Cancel</button>
+          </div>
+        </div>
       </div>
     </p-tabPanel>
 
     <p-tabPanel header="System Impacts">
-      System impacts
+      <div class="tab-container">
+        <div class="form-group row">
+          <div class="col-md-12">
+            <label class="mt-6">System Impacts:
+              <small>(Tell us what system will be impacted by this requirement)</small>
+            </label>
+          </div>
+          <div class="col-md-12">
+            <textarea name="desc" class="form-control" rows="20"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <button type="button" class="btn btn-outline-primary">Save</button>
+            <button type="button" class="btn btn-outline-primary">Cancel</button>
+          </div>
+        </div>
+      </div>
     </p-tabPanel>
 
     <p-tabPanel header="Glossary">
