@@ -75,7 +75,11 @@
         background: url("../../../assets/svg-icons/delete.svg");
       }
     }
-
+    .disabled {
+      color: #cdcdcd !important;
+      pointer-events: none !important;
+      cursor: default !important;
+    }
   }
 }
 

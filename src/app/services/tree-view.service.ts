@@ -42,7 +42,6 @@ export class TreeViewService {
     this.isSelect = true;
     this.itemList = itemList;
     this.itemSelect = true;
-    console.log(this.itemList.id);
   }
   showEditor(item: any, itemList: any){
     this.editItem = item;
