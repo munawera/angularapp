@@ -65,12 +65,12 @@
       <div class="tab-container">
         <div class="form-group row">
           <div class="col-md-12">
-            <label class="mt-6">System Impacts:
+            <label class="mt-6">System Impacts: <br>
               <small>(Tell us what system will be impacted by this requirement)</small>
             </label>
           </div>
           <div class="col-md-12">
-            <textarea name="desc" class="form-control" rows="20"></textarea>
+            <textarea name="desc" class="form-control" rows="13"></textarea>
           </div>
         </div>
         <div class="row">
@@ -83,7 +83,49 @@
     </p-tabPanel>
 
     <p-tabPanel header="Glossary">
-      Glossary
+      <div class="tab-container">
+        <div class="form-group row">
+          <div class="col-md-4"><label class="mt-6">Enter Acronym</label></div>
+          <div class="col-md-6">
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-4"><label class="mt-6">Enter Full Form</label></div>
+          <div class="col-md-6">
+            <input type="text" class="form-control">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <p-table [value]="products" styleClass="p-datatable-gridlines head-style-2" responsiveLayout="scroll">
+
+              <ng-template pTemplate="header">
+                <tr>
+                  <th>Keyword</th>
+                  <th>Full Form</th>
+
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-product>
+                <tr>
+                  <td>{{product.keyword}}</td>
+                  <td>{{product.full_form}}</td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <button type="button" class="btn btn-outline-primary">Save</button>
+            <button type="button" class="btn btn-outline-primary">Cancel</button>
+          </div>
+        </div>
+      </div>
     </p-tabPanel>
 
     <p-tabPanel header="Attachment">

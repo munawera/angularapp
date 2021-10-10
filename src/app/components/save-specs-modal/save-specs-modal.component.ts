@@ -15,6 +15,62 @@ export class SaveSpecsModalComponent implements OnInit {
     { name: "Ohio", code: "Ohio" },
     { name: "Washington", code: "Washington" }
   ];
+  public products: any = [
+    {
+      "id": "1000",
+      "keyword": "654",
+      "full_form": "This is a test",
+    },
+    {
+      "id": "1001",
+      "keyword": "654",
+      "full_form": "This is a test",
+    },
+    {
+      "id": "1002",
+      "keyword": "654",
+      "full_form": "This is a test",
+    },
+    {
+      "id": "1003",
+      "keyword": "654",
+      "full_form": "This is a test",
+    },
+    {
+      "id": "1004",
+      "keyword": "654",
+      "full_form": "This is a test",
+    },
+    {
+      "id": "1005",
+      "keyword": "654",
+      "full_form": "This is a test",
+    },
+    {
+      "id": "1006",
+      "keyword": "654",
+      "full_form": "This is a test",
+    },
+    {
+      "id": "1007",
+      "keyword": "654",
+      "full_form": "This is a test",
+    },
+    {
+      "id": "1008",
+      "keyword": "654",
+      "full_form": "This is a test",
+    },
+    {
+      "id": "1009",
+      "keyword": "654",
+      "full_form": "This is a test",
+    },{
+      "id": "1010",
+      "keyword": "654",
+      "full_form": "This is a test",
+    }
+  ];
   constructor(public treeViewService: TreeViewService) { }
 
   ngOnInit(): void {

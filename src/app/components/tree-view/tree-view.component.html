@@ -6,7 +6,7 @@
           (click)="treeViewService.selectItem(node)"
           [ngClass]="{'selected': treeViewService.itemList?.id === node.id}"
           [hidden]="node.id==treeViewService.editItem">{{node.label}}</span>
-    <input class="form-control"
+    <input class="form-control edit-input"
            type="text" [(ngModel)]="node.label" *ngIf="node.id==treeViewService.editItem"
            (keydown.control.q)="treeViewService.addChild('')"
            (keydown.control.enter)="treeViewService.addRoot('')"
