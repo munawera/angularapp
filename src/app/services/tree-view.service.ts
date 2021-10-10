@@ -29,8 +29,13 @@ export class TreeViewService {
   public isShowFull: any = true;
   public isShowId: any = false;
   public isAutoFill: any = true;
+  public isSaveSpecs: any = true;
   constructor() { }
 
+  saveSpecs(itemList: any) {
+    this.itemList = itemList;
+    this.isSaveSpecs = !this.isSaveSpecs
+  }
   selectItem(itemList: any){
     this.isSelect = true;
     this.itemList = itemList;
