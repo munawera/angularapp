@@ -32,9 +32,11 @@ export class TreeViewService {
   public isSaveSpecs: any = true;
   constructor() { }
 
-  saveSpecs(itemList: any) {
-    this.itemList = itemList;
-    this.isSaveSpecs = !this.isSaveSpecs
+  saveSpecs() {
+    this.isSaveSpecs = false
+  }
+  saveSpecsClose(){
+    this.isSaveSpecs = true
   }
   selectItem(itemList: any){
     this.isSelect = true;

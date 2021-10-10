@@ -10,12 +10,12 @@
   right: 110px;
   border: 1px #d7d7d7 solid;
   border-radius: 6px;
-  overflow-y: scroll;
   padding: 10px;
-  height: 89%;
   box-shadow: 0 0 5px #c6c5cc;
   .tab-container{
     padding: 1.5rem;
+    overflow-y: scroll;
+    height: 55vh;
     .form-group {
       margin-bottom: 8px;
     }

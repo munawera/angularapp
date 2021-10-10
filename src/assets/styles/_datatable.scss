@@ -19,6 +19,9 @@
     font-size: 14px;
     white-space:nowrap;
   }
+}
+
+.p-datatable-striped{
   .p-datatable-tbody {
     tr {
       &:nth-child(even) {
@@ -31,4 +34,3 @@
     }
   }
 }
-

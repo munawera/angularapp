@@ -55,7 +55,7 @@
         <div class="row">
           <div class="col-md-12 text-center">
             <button type="button" class="btn btn-outline-primary">Save</button>
-            <button type="button" class="btn btn-outline-primary">Cancel</button>
+            <button type="button" class="btn btn-outline-primary" (click)="treeViewService.saveSpecsClose()">Cancel</button>
           </div>
         </div>
       </div>
@@ -76,7 +76,7 @@
         <div class="row">
           <div class="col-md-12 text-center">
             <button type="button" class="btn btn-outline-primary">Save</button>
-            <button type="button" class="btn btn-outline-primary">Cancel</button>
+            <button type="button" class="btn btn-outline-primary" (click)="treeViewService.saveSpecsClose()">Cancel</button>
           </div>
         </div>
       </div>
@@ -105,7 +105,6 @@
                 <tr>
                   <th>Keyword</th>
                   <th>Full Form</th>
-
                 </tr>
               </ng-template>
               <ng-template pTemplate="body" let-product>
@@ -122,14 +121,47 @@
         <div class="row">
           <div class="col-md-12 text-center">
             <button type="button" class="btn btn-outline-primary">Save</button>
-            <button type="button" class="btn btn-outline-primary">Cancel</button>
+            <button type="button" class="btn btn-outline-primary" (click)="treeViewService.saveSpecsClose()">Cancel</button>
           </div>
         </div>
       </div>
     </p-tabPanel>
 
     <p-tabPanel header="Attachment">
-      Attachment
+      <div class="tab-container">
+        <div class="form-group row">
+          <div class="col-md-5"><label class="mt-6">Select file to upload</label></div>
+          <div class="col-md-6">
+            <input type="text" class="form-control">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <p-table [value]="products" styleClass="p-datatable-gridlines head-style-2" responsiveLayout="scroll">
+
+              <ng-template pTemplate="header">
+                <tr>
+                  <th>Filename</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-product>
+                <tr>
+                  <td>{{product.keyword}}</td>
+                </tr>
+              </ng-template>
+            </p-table>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <button type="button" class="btn btn-outline-primary">Save</button>
+            <button type="button" class="btn btn-outline-primary" (click)="treeViewService.saveSpecsClose()">Cancel</button>
+          </div>
+        </div>
+      </div>
     </p-tabPanel>
 
   </p-tabView>

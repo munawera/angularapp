@@ -59,7 +59,33 @@
 
   .p-tabview-panels{
     padding: 0 !important;
-    box-shadow: 0 4px 35px #c6c5cc;
+    box-shadow: 0 35px 24px -31px #c6c5cc;
+    position: relative;
+    .version{
+      width: 100px;
+      height: 82px;
+      display: inline-block;
+      color: #1665c0;
+      position: absolute;
+      top: 0;
+      right: 10px;
+      z-index: 99;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      &:hover{
+        color: $secondary;
+      }
+      i{
+        font-size: 30px;
+        display: block;
+        position: relative;
+        top: 10px;
+      }
+      span{
+        font-size: 16px;
+      }
+    }
   }
   .p-tabview-nav-content{
     background-color: #342f57 !important;
