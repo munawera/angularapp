@@ -1,0 +1,262 @@
+<p-dialog [(visible)]="treeViewService.displayModal" [modal]="true" [style]="{width: '85vw'}" [baseZIndex]="10000"
+          [draggable]="false" [resizable]="false" class="open-specs">
+
+  <p-tabView styleClass="tabview-custom">
+    <p-tabPanel>
+      <ng-template pTemplate = "header">
+        <i class="icon-copy"></i>
+        <span>My Files</span>
+      </ng-template>
+
+      <div class="div">
+        <div class="row">
+          <div class="col-md-4">
+            <p-listbox
+              [options]="countries"
+              [(ngModel)]="selectedCountries"
+              [metaKeySelection]="false"
+              [checkbox]="false"
+              [filter]="true"
+              [multiple]="false"
+              optionLabel="name"
+              [listStyle]="{ 'max-height': '450px' }"
+              [style]="{ width: '100%' }">
+              <ng-template let-country pTemplate="item">
+                <div class="country-item">
+                  <div>{{ country.name }}</div>
+                </div>
+              </ng-template>
+            </p-listbox>
+          </div>
+          <div class="col-md-8">
+
+            <div class="row">
+              <div class="col-md-3 text-end"><label>File Name:</label></div>
+              <div class="col-md-9"><label>FileName_2030.docx</label></div>
+
+              <div class="col-md-3 text-end"><label>Created By:</label></div>
+              <div class="col-md-9"><label>FileName_2030.docx</label></div>
+
+              <div class="col-md-3 text-end"><label>Status:</label></div>
+              <div class="col-md-9"><label>FileName_2030.docx</label></div>
+
+              <div class="col-md-3 text-end"><label>Last Checked in by:</label></div>
+              <div class="col-md-9"><label>FileName_2030.docx</label></div>
+            </div>
+
+            <p-table styleClass="p-datatable head-style-2" [paginator]="true" paginatorPosition="top" [rows]="5" [value]="library" [resizableColumns]="true">
+              <ng-template pTemplate="header" let-columns>
+                <tr>
+                  <th>Version </th>
+                  <th>Created By</th>
+                  <th>Date Time</th>
+                  <th>Version Type</th>
+                  <th>Comments</th>
+                  <th class="col-25em">Actions</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-library>
+                <tr>
+                  <td>{{library.id}}</td>
+                  <td>{{library.created_by}}</td>
+                  <td>{{library.created}}</td>
+                  <td>{{library.category}}</td>
+                  <td>{{library.category}}</td>
+                  <td>
+                    <span class="p-column-title">Actions</span>
+                    <button type="button" class="btn btn-link"><i class="icon-writing"></i> Open</button>
+                    <button type="button" class="btn btn-link"><i class="icon-delete-2"></i> Read Only</button>
+                    <button type="button" class="btn btn-link"><i class="icon-delete-2"></i> Generate</button>
+                  </td>
+                </tr>
+              </ng-template>
+            </p-table>
+
+
+          </div>
+        </div>
+      </div>
+
+    </p-tabPanel>
+    <p-tabPanel>
+      <ng-template pTemplate = "header">
+        <i class="icon-tick"></i>
+        <span>Checked Out</span>
+      </ng-template>
+      <div class="div">
+        <div class="row">
+          <div class="col-md-4">
+            hg
+          </div>
+          <div class="col-md-8">
+
+            <p-table styleClass="p-datatable-striped head-style-2" [value]="library" [scrollable]="true" scrollHeight="495px">
+              <ng-template pTemplate="header" let-columns>
+                <tr>
+                  <th>Version </th>
+                  <th>Created By</th>
+                  <th>Date Time</th>
+                  <th>Version Type</th>
+                  <th>Comments</th>
+                  <th>Actions</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-library>
+                <tr>
+                  <td>{{library.id}}</td>
+                  <td>{{library.created_by}}</td>
+                  <td>{{library.created}}</td>
+                  <td>{{library.category}}</td>
+                  <td>{{library.description}}</td>
+                  <td>
+                    <span class="p-column-title">Actions</span>
+                    <button type="button" class="btn btn-link"><i class="icon-writing"></i> Open</button>
+                    <button type="button" class="btn btn-link"><i class="icon-delete-2"></i> Read Only</button>
+                    <button type="button" class="btn btn-link"><i class="icon-delete-2"></i> Generate</button>
+                  </td>
+                </tr>
+              </ng-template>
+            </p-table>
+
+
+          </div>
+        </div>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel>
+      <ng-template pTemplate = "header">
+        <i class="icon-exclude"></i>
+        <span>Show Excluded</span>
+      </ng-template>
+      <div class="div">
+        <div class="row">
+          <div class="col-md-4">
+            hg
+          </div>
+          <div class="col-md-8">
+
+            <p-table styleClass="p-datatable-striped head-style-2" [value]="library" [scrollable]="true" scrollHeight="495px">
+              <ng-template pTemplate="header" let-columns>
+                <tr>
+                  <th>Version </th>
+                  <th>Created By</th>
+                  <th>Date Time</th>
+                  <th>Version Type</th>
+                  <th>Comments</th>
+                  <th>Actions</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-library>
+                <tr>
+                  <td>{{library.id}}</td>
+                  <td>{{library.created_by}}</td>
+                  <td>{{library.created}}</td>
+                  <td>{{library.category}}</td>
+                  <td>{{library.description}}</td>
+                  <td>
+                    <span class="p-column-title">Actions</span>
+                    <button type="button" class="btn btn-link"><i class="icon-writing"></i> Open</button>
+                    <button type="button" class="btn btn-link"><i class="icon-delete-2"></i> Read Only</button>
+                    <button type="button" class="btn btn-link"><i class="icon-delete-2"></i> Generate</button>
+                  </td>
+                </tr>
+              </ng-template>
+            </p-table>
+
+
+          </div>
+        </div>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel>
+      <ng-template pTemplate = "header">
+        <i class="icon-version"></i>
+        <span>Versions</span>
+      </ng-template>
+      <div class="div">
+        <div class="row">
+          <div class="col-md-4">
+            hg
+          </div>
+          <div class="col-md-8">
+
+            <p-table styleClass="p-datatable-striped head-style-2" [value]="library" [scrollable]="true" scrollHeight="495px">
+              <ng-template pTemplate="header" let-columns>
+                <tr>
+                  <th>Version </th>
+                  <th>Created By</th>
+                  <th>Date Time</th>
+                  <th>Version Type</th>
+                  <th>Comments</th>
+                  <th>Actions</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-library>
+                <tr>
+                  <td>{{library.id}}</td>
+                  <td>{{library.created_by}}</td>
+                  <td>{{library.created}}</td>
+                  <td>{{library.category}}</td>
+                  <td>{{library.description}}</td>
+                  <td>
+                    <span class="p-column-title">Actions</span>
+                    <button type="button" class="btn btn-link"><i class="icon-writing"></i> Open</button>
+                    <button type="button" class="btn btn-link"><i class="icon-delete-2"></i> Read Only</button>
+                    <button type="button" class="btn btn-link"><i class="icon-delete-2"></i> Generate</button>
+                  </td>
+                </tr>
+              </ng-template>
+            </p-table>
+
+
+          </div>
+        </div>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel>
+      <ng-template pTemplate = "header">
+        <i class="icon-calendar-1"></i>
+        <span>Created Today</span>
+      </ng-template>
+      <div class="div">
+        <div class="row">
+          <div class="col-md-4">
+            hg
+          </div>
+          <div class="col-md-8">
+
+            <p-table styleClass="p-datatable-striped head-style-2" [value]="library" [scrollable]="true" scrollHeight="495px">
+              <ng-template pTemplate="header" let-columns>
+                <tr>
+                  <th>Version </th>
+                  <th>Created By</th>
+                  <th>Date Time</th>
+                  <th>Version Type</th>
+                  <th>Comments</th>
+                  <th>Actions</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-library>
+                <tr>
+                  <td>{{library.id}}</td>
+                  <td>{{library.created_by}}</td>
+                  <td>{{library.created}}</td>
+                  <td>{{library.category}}</td>
+                  <td>{{library.description}}</td>
+                  <td>
+                    <span class="p-column-title">Actions</span>
+                    <button type="button" class="btn btn-link"><i class="icon-writing"></i> Open</button>
+                    <button type="button" class="btn btn-link"><i class="icon-delete-2"></i> Read Only</button>
+                    <button type="button" class="btn btn-link"><i class="icon-delete-2"></i> Generate</button>
+                  </td>
+                </tr>
+              </ng-template>
+            </p-table>
+
+
+          </div>
+        </div>
+      </div>
+    </p-tabPanel>
+  </p-tabView>
+</p-dialog>

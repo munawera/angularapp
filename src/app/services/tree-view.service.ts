@@ -26,11 +26,19 @@ export class TreeViewService {
   public itemList: any = null;
   public itemSelect: any = false;
   public isSelect: any = false;
-  public isShowFull: any = true;
+  // public isShowFull: any = true;
   public isShowId: any = false;
   public isAutoFill: any = true;
   public isSaveSpecs: any = true;
+  public displayModal: boolean = false;
+
+
   constructor() { }
+
+
+  showDialog() {
+    this.displayModal = true;
+  }
 
   saveSpecs() {
     this.isSaveSpecs = false

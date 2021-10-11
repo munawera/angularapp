@@ -5,7 +5,7 @@
   .edit-input{
     // border-color: transparent !important;
     padding: 0 5px !important;
-    width: 90%;
+    width: 100%;
   }
   .form-control[readonly]{
     padding: 0 !important;
@@ -215,5 +215,7 @@
     }
   }
 }
-
+.p-datatable table {
+  table-layout: unset !important;
+}
 

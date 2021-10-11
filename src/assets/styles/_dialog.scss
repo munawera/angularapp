@@ -1,0 +1,41 @@
+.open-specs{
+  .p-dialog-content{
+    padding: 1.25rem !important;
+  }
+  .p-dialog-header{
+    padding: 0 !important;
+    .p-dialog-header-close{
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      z-index: 99;
+    }
+  }
+  .p-tabview-nav-content{
+    // padding: 20px 0 0 0 !important;
+  }
+  .p-highlight{
+    .p-tabview-nav-link{
+      background: #e0e0e0 !important;
+    }
+  }
+  .p-tabview-nav-link{
+    margin: 0 10px 0 0 !important;
+    padding: 10px 15px !important;
+    border: 1px #e0e0e0 solid !important;
+    border-radius: 5px 5px 0 0 !important;
+    display: block;
+    text-align: center;
+    width: 121px;
+    font-size: 14px;
+    color: $primary !important;
+    border-bottom: 0 !important;
+    i{
+      display: block !important;
+      font-size: 20px;
+    }
+  }
+  .p-tabview-ink-bar{
+    display: none !important;
+  }
+}

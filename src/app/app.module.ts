@@ -35,6 +35,10 @@ import { TreeViewComponent } from './components/tree-view/tree-view.component';
 import { ClickOutsideModule } from 'ng-click-outside';
 import { AutoFillCaseComponent } from './components/auto-fill-case/auto-fill-case.component';
 import { SaveSpecsModalComponent } from './components/save-specs-modal/save-specs-modal.component';
+import {OverlayPanelModule} from "primeng/overlaypanel";
+import {DialogModule} from "primeng/dialog";
+import { OpenSpecsComponent } from './components/open-specs/open-specs.component';
+import {ListboxModule} from "primeng/listbox";
 
 
 @NgModule({
@@ -55,28 +59,32 @@ import { SaveSpecsModalComponent } from './components/save-specs-modal/save-spec
     TreeViewComponent,
     AutoFillCaseComponent,
     SaveSpecsModalComponent,
+    OpenSpecsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    ButtonModule,
-    RippleModule,
-    FormsModule,
-    InputTextModule,
-    MenubarModule,
-    SplitterModule,
-    TableModule,
-    TabMenuModule,
-    ScrollPanelModule,
-    TabViewModule,
-    DividerModule,
-    DropdownModule,
-    InputTextareaModule,
-    CardModule,
-    TreeModule,
-    ClickOutsideModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        ButtonModule,
+        RippleModule,
+        FormsModule,
+        InputTextModule,
+        MenubarModule,
+        SplitterModule,
+        TableModule,
+        TabMenuModule,
+        ScrollPanelModule,
+        TabViewModule,
+        DividerModule,
+        DropdownModule,
+        InputTextareaModule,
+        CardModule,
+        TreeModule,
+        ClickOutsideModule,
+        OverlayPanelModule,
+        DialogModule,
+        ListboxModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

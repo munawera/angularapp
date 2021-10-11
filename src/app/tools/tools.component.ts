@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {TreeViewService} from "../services/tree-view.service";
+import { OverlayPanelModule } from 'primeng/overlaypanel';
 
 @Component({
   selector: 'app-tools',
@@ -141,5 +142,6 @@ export class ToolsComponent {
       "created-by": "Muhammad Ali"
     }
   ];
+
   constructor(public treeViewService: TreeViewService) {}
 }
