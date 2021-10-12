@@ -48,46 +48,7 @@ export class OpenSpecsComponent implements OnInit {
       created: '12/04/2021',
       created_by: 'Abu Baker'
     },
-    {
-      id: 6,
-      specification_title: "Enterprise Library",
-      description: "User name and password",
-      category: 'Abc',
-      created: '12/04/2021',
-      created_by: 'Abu Baker'
-    },
-    {
-      id: 7,
-      specification_title: "Enterprise Library",
-      description: "User name and password",
-      category: 'Abc',
-      created: '12/04/2021',
-      created_by: 'Abu Baker'
-    },
-    {
-      id: 8,
-      specification_title: "Enterprise Library",
-      description: "User name and password",
-      category: 'Abc',
-      created: '12/04/2021',
-      created_by: 'Abu Baker'
-    },
-    {
-      id: 9,
-      specification_title: "Enterprise Library",
-      description: "User name and password",
-      category: 'Abc',
-      created: '12/04/2021',
-      created_by: 'Abu Baker'
-    },
-    {
-      id: 10,
-      specification_title: "Enterprise Library",
-      description: "User name and password",
-      category: 'Abc',
-      created: '12/04/2021',
-      created_by: 'Abu Baker'
-    },
+
   ];
   selectedCountries: any[] | undefined;
   countries = [

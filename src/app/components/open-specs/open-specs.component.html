@@ -10,27 +10,29 @@
 
       <div class="div">
         <div class="row">
-          <div class="col-md-4">
-            <p-listbox
-              [options]="countries"
-              [(ngModel)]="selectedCountries"
-              [metaKeySelection]="false"
-              [checkbox]="false"
-              [filter]="true"
-              [multiple]="false"
-              optionLabel="name"
-              [listStyle]="{ 'max-height': '450px' }"
-              [style]="{ width: '100%' }">
-              <ng-template let-country pTemplate="item">
-                <div class="country-item">
-                  <div>{{ country.name }}</div>
-                </div>
-              </ng-template>
-            </p-listbox>
+          <div class="col-md-3">
+            <div class="list-box">
+              <p-listbox
+                [options]="countries"
+                [(ngModel)]="selectedCountries"
+                [metaKeySelection]="false"
+                [checkbox]="false"
+                [filter]="true"
+                [multiple]="false"
+                optionLabel="name"
+                [listStyle]="{ 'max-height': '450px' }"
+                [style]="{ width: '100%' }">
+                <ng-template let-country pTemplate="item">
+                  <div class="country-item">
+                    <div>{{ country.name }}</div>
+                  </div>
+                </ng-template>
+              </p-listbox>
+            </div>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-9">
 
-            <div class="row">
+            <div class="row file-detail">
               <div class="col-md-3 text-end"><label>File Name:</label></div>
               <div class="col-md-9"><label>FileName_2030.docx</label></div>
 
@@ -44,7 +46,7 @@
               <div class="col-md-9"><label>FileName_2030.docx</label></div>
             </div>
 
-            <p-table styleClass="p-datatable head-style-2" [paginator]="true" paginatorPosition="top" [rows]="5" [value]="library" [resizableColumns]="true">
+            <p-table styleClass="p-datatable head-style-2" [paginator]="false" paginatorPosition="bottom" [rows]="5" [value]="library" [resizableColumns]="true">
               <ng-template pTemplate="header" let-columns>
                 <tr>
                   <th>Version </th>
@@ -64,9 +66,9 @@
                   <td>{{library.category}}</td>
                   <td>
                     <span class="p-column-title">Actions</span>
-                    <button type="button" class="btn btn-link"><i class="icon-writing"></i> Open</button>
-                    <button type="button" class="btn btn-link"><i class="icon-delete-2"></i> Read Only</button>
-                    <button type="button" class="btn btn-link"><i class="icon-delete-2"></i> Generate</button>
+                    <button type="button" class="btn btn-link"><i class="icon-open"></i> Open</button>
+                    <button type="button" class="btn btn-link"><i class="icon-read-only"></i> Read Only</button>
+                    <button type="button" class="btn btn-link"><i class="icon-create"></i> Generate</button>
                   </td>
                 </tr>
               </ng-template>
