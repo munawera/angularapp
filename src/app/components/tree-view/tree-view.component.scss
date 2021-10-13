@@ -5,3 +5,26 @@
 .selected + .auto_fill_case{
   // display: inline-block;
 }
+.dropdown.setting{
+  position: relative;
+  top: 2px;
+  .dropdown-menu{
+    padding: 0 !important;
+    &.show{
+      position: absolute;
+      right: 0;
+      top:20px;
+    }
+    .dropdown-item{
+      margin: 0 !important;
+      padding: 0.3rem 0.6rem;
+      font-size: 14px;
+      border-bottom: 1px #d9d9d9 solid;
+      i{
+        position: relative;
+        top:2px;
+        margin-right: 5px;
+      }
+    }
+  }
+}

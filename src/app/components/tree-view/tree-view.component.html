@@ -5,14 +5,16 @@
           (dblclick)="treeViewService.showEditor(node.id, node)"
           (click)="treeViewService.selectItem(node)"
           [ngClass]="{'selected': treeViewService.itemList?.id === node.id}"
-          [hidden]="node.id==treeViewService.editItem">{{node.label}}</span>
+          [hidden]="node.id==treeViewService.editItem"
+          (clickOutside)="treeViewService.onClickedOutsideTree($event)" [attachOutsideOnClick]="true">{{node.label}}</span>
     <input class="form-control edit-input"
            type="text" [(ngModel)]="node.label" *ngIf="node.id==treeViewService.editItem"
            (keydown.control.q)="treeViewService.addChild('')"
            (keydown.control.enter)="treeViewService.addRoot('')"
            (keydown.control.d)="treeViewService.removeItem('')"
            (keydown.control.shift.s)="treeViewService.openAutoFillCase()"
-           (keydown.enter)="treeViewService.controlEnter()">
+           (keydown.enter)="treeViewService.controlEnter()"
+           (clickOutside)="treeViewService.onClickedOutsideTree($event)" [attachOutsideOnClick]="true">
 
     <app-auto-fill-case [hidden]="treeViewService.isAutoFill" *ngIf="treeViewService?.itemList?.id == node.id"></app-auto-fill-case>
     <app-open-specs></app-open-specs>
@@ -22,19 +24,14 @@
 <!--    <a class="icon-flag-o"></a>-->
 <!--    <a class="icon-chat"></a>-->
 
-    <div class="dropdown" [ngClass]="{'show': caseDropdown}">
-      <a class="nav-link" href="javascript:" (click)="caseDropdown = !caseDropdown">
-        <i class="pi pi-fw pi-user-plus"></i>
+    <div class="dropdown setting" (click)="treeViewService.selectItem(node)" (clickOutside)="onClickedOutside($event)" [attachOutsideOnClick]="true" [ngClass]="{'show': caseDropdown}">
+      <a (click)="caseDropdown = !caseDropdown">
+        <i class="icon-cog"></i>
         <i class="icon-caret-down-two"></i>
       </a>
       <div class="dropdown-menu" *ngIf="treeViewService?.itemList?.id == node.id" [ngClass]="{'show': caseDropdown}">
-        <a class="dropdown-item" href="javascript:"><i class="icon-user"></i> Profile</a>
-        <a class="dropdown-item" href="javascript:"><i class="icon-cog"></i> Setting</a>
-        <a class="dropdown-item" href="javascript:"><i class="icon-log-out"></i> Logout</a>
-
-        <a class="dropdown-item" href="javascript:" routerLink="review-home"><i class="icon-cog"></i> Review Home</a>
-        <a class="dropdown-item" href="javascript:" routerLink="review-selected"><i class="icon-cog"></i> Review Selected</a>
-        <a class="dropdown-item" href="javascript:" routerLink="tools"><i class="icon-cog"></i> Editor</a>
+        <a class="dropdown-item" href="javascript:"><i class="icon-flag-o"></i> Flag</a>
+        <a class="dropdown-item" href="javascript:"><i class="icon-chat"></i> Chat</a>
       </div>
     </div>
 

@@ -10,6 +10,7 @@ export class TreeViewComponent {
   caseDropdown: boolean = false;
   constructor(public treeViewService: TreeViewService) {}
   onClickedOutside(e: Event){
+    console.log(e)
     this.caseDropdown = false;
   }
 }

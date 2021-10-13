@@ -92,4 +92,10 @@ export class TreeViewService {
     this.editItem = ''
     this.isAutoFill = true;
   }
+  onClickedOutsideTree(e: Event){
+    console.log(e)
+    this.editItem = ''
+    this.itemSelect = false;
+    this.itemList = [];
+  }
 }
