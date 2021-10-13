@@ -1,15 +1,16 @@
-<span class="auto_fill_case">
+<span class="auto_fill_case" [ngClass]="{'show':!caseDetail}">
   <span class="row">
-    <span class="col-md-7">
+    <span [ngClass]="{'col-md-7 pe-0':!caseDetail, 'col-md-12':caseDetail}">
       <span class="light-gray">
         <span class="head">
           <i class="icon-cancel" (click)="treeViewService.closeAutoFill()"></i>
           <span class="row">
-            <span class="col-md-5">
+            <span class="col-md-8">
               <input type="text" class="form-control" placeholder="Search">
             </span>
-            <span class="col-md-7">
-              <button type="button" class="btn btn-link"><i class="icon-add-user"></i> Add use case</button>
+            <span class="col-md-4">
+<!--              <button type="button" class="btn btn-link"><i class="icon-add-user"></i> Add use case</button>-->
+              <button type="button" class="btn btn-link"><i class="icon-add-user"></i></button>
               <button type="button" class="btn btn-link"><i class="icon-arrows-ccw"></i></button>
             </span>
           </span>
@@ -19,50 +20,50 @@
             <li>
               <a href="javascript:"><i class="icon-user"></i> This is a requirement</a>
               <i class="icon-close-circled"></i>
-              <i class="icon-android-more-horizontal"></i>
+              <i class="icon-android-more-horizontal" (click)="openCaseDetail()"></i>
             </li>
             <li>
               <a href="javascript:"><i class="icon-list"></i> This is a use case</a>
               <i class="icon-close-circled"></i>
-              <i class="icon-android-more-horizontal"></i>
+              <i class="icon-android-more-horizontal" (click)="openCaseDetail()"></i>
             </li>
             <li>
               <a href="javascript:"><i class="icon-user"></i> This is a requirement</a>
               <i class="icon-close-circled"></i>
-              <i class="icon-android-more-horizontal"></i>
+              <i class="icon-android-more-horizontal" (click)="openCaseDetail()"></i>
             </li>
             <li>
               <a href="javascript:"><i class="icon-list"></i> This is a use case</a>
               <i class="icon-close-circled"></i>
-              <i class="icon-android-more-horizontal"></i>
+              <i class="icon-android-more-horizontal" (click)="openCaseDetail()"></i>
             </li>
             <li>
               <a href="javascript:"><i class="icon-user"></i> This is a requirement</a>
               <i class="icon-close-circled"></i>
-              <i class="icon-android-more-horizontal"></i>
+              <i class="icon-android-more-horizontal" (click)="openCaseDetail()"></i>
             </li>
             <li>
               <a href="javascript:"><i class="icon-list"></i> This is a use case</a>
               <i class="icon-close-circled"></i>
-              <i class="icon-android-more-horizontal"></i>
+              <i class="icon-android-more-horizontal" (click)="openCaseDetail()"></i>
             </li>
             <li>
               <a href="javascript:"><i class="icon-user"></i> This is a requirement</a>
               <i class="icon-close-circled"></i>
-              <i class="icon-android-more-horizontal"></i>
+              <i class="icon-android-more-horizontal" (click)="openCaseDetail()"></i>
             </li>
             <li>
               <a href="javascript:"><i class="icon-list"></i> This is a use case</a>
               <i class="icon-close-circled"></i>
-              <i class="icon-android-more-horizontal"></i>
+              <i class="icon-android-more-horizontal" (click)="openCaseDetail()"></i>
             </li>
           </ul>
         </span>
       </span>
     </span>
-    <span class="col-md-5">
+    <span class="col-md-5 ps-0" [hidden]="caseDetail">
       <span class="white_case">
-        <i class="icon-cancel" (click)="treeViewService.closeAutoFill()"></i>
+        <i class="icon-cancel" (click)="closeCaseDetail()"></i>
         <p>
         Lorem ipsum dolor sit amet,
         consectetur adipisicing elit, sed

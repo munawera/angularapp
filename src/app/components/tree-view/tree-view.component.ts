@@ -7,5 +7,9 @@ import { TreeViewService } from "../../services/tree-view.service";
   styleUrls: ['./tree-view.component.scss']
 })
 export class TreeViewComponent {
+  caseDropdown: boolean = false;
   constructor(public treeViewService: TreeViewService) {}
+  onClickedOutside(e: Event){
+    this.caseDropdown = false;
+  }
 }

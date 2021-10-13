@@ -11,15 +11,32 @@
            (keydown.control.q)="treeViewService.addChild('')"
            (keydown.control.enter)="treeViewService.addRoot('')"
            (keydown.control.d)="treeViewService.removeItem('')"
-           (keydown.control.s)="treeViewService.openAutoFillCase()"
+           (keydown.control.shift.s)="treeViewService.openAutoFillCase()"
            (keydown.enter)="treeViewService.controlEnter()">
 
     <app-auto-fill-case [hidden]="treeViewService.isAutoFill" *ngIf="treeViewService?.itemList?.id == node.id"></app-auto-fill-case>
     <app-open-specs></app-open-specs>
 
-    <a [hidden]="treeViewService.isShowId" (click)="treeViewService.saveSpecs()">{{node.id}}</a>
-    <a class="icon-flag-o"></a>
-    <a class="icon-chat"></a>
+<!--    <a [hidden]="treeViewService.isShowId" (click)="treeViewService.saveSpecs()">{{node.id}}</a>-->
+    <a [hidden]="treeViewService.isShowId">{{node.id}}</a>
+<!--    <a class="icon-flag-o"></a>-->
+<!--    <a class="icon-chat"></a>-->
+
+    <div class="dropdown" [ngClass]="{'show': caseDropdown}">
+      <a class="nav-link" href="javascript:" (click)="caseDropdown = !caseDropdown">
+        <i class="pi pi-fw pi-user-plus"></i>
+        <i class="icon-caret-down-two"></i>
+      </a>
+      <div class="dropdown-menu" *ngIf="treeViewService?.itemList?.id == node.id" [ngClass]="{'show': caseDropdown}">
+        <a class="dropdown-item" href="javascript:"><i class="icon-user"></i> Profile</a>
+        <a class="dropdown-item" href="javascript:"><i class="icon-cog"></i> Setting</a>
+        <a class="dropdown-item" href="javascript:"><i class="icon-log-out"></i> Logout</a>
+
+        <a class="dropdown-item" href="javascript:" routerLink="review-home"><i class="icon-cog"></i> Review Home</a>
+        <a class="dropdown-item" href="javascript:" routerLink="review-selected"><i class="icon-cog"></i> Review Selected</a>
+        <a class="dropdown-item" href="javascript:" routerLink="tools"><i class="icon-cog"></i> Editor</a>
+      </div>
+    </div>
 
   </ng-template>
 </p-tree>

@@ -46,7 +46,7 @@
     position: relative;
     i.icon-cancel{
       position: absolute;
-      right: 3px;
+      right: 8px;
       top: -9px;
       color: #555555;
       cursor: pointer;
@@ -57,7 +57,7 @@
     .head{
       border-bottom: 1px #d7d7d7 solid !important;
       display: inline-block;
-      width: calc(100% + 24px);
+      width: 100%;
       .form-control{
         margin: 10px;
         border: 1px #d7d7d7 solid !important;
@@ -67,7 +67,7 @@
         line-height: 10px;
       }
       .btn-link {
-        padding: 11px 12px;
+        padding: 11px 9px;
         color: #555555 !important;
         &:hover{
           color: $secondary !important;
@@ -84,7 +84,7 @@
       height: 120px;
       overflow-y: scroll;
       display: inline-block;
-      width: calc(100% + 20px);
+      width: 100%;
       padding: 10px 0 0 0;
       ul{
         margin: 0;

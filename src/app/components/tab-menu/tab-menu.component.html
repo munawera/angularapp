@@ -37,27 +37,27 @@
     </nav>
   </p-tabPanel>
 
-  <p-tabPanel header="Tools" routerLinkActive="active">
+  <p-tabPanel header="Tools">
     <nav class="nav">
-      <li routerLinkActive="active">
+      <li >
         <a class="nav-link" routerLink="enterprise-library"><i class="icon-add-2"></i><span>Mark as Favorite</span></a>
       </li>
-      <li routerLinkActive="active">
+      <li>
         <a class="nav-link" ><i class="icon-calendar-1"></i><span>Mark as Baseline</span></a>
       </li>
-      <li routerLinkActive="active">
-        <a class="nav-link" routerLink="review-selected"><i class="icon-file"></i><span>Object Properties</span></a>
+      <li>
+        <a class="nav-link" [ngClass]="{'disabled': !treeViewService.itemSelect}" (click)="treeViewService.saveSpecs()"><i class="icon-file"></i><span>Object Properties</span></a>
       </li>
-      <li routerLinkActive="active">
+      <li>
         <a class="nav-link" ><i class="icon-import"></i><span>Import</span></a>
       </li>
-      <li routerLinkActive="active">
+      <li>
         <a class="nav-link" ><i class="icon-before-after"></i><span>Compare Specs</span></a>
       </li>
       <li>
         <a class="nav-link" (click)="treeViewService.isShowId = !treeViewService.isShowId"><i class="icon-driver-license"></i><span>View Object ID</span></a>
       </li>
-      <li routerLinkActive="active">
+      <li>
         <a class="nav-link" ><i class="icon-diagnostic"></i><span>View History</span></a>
       </li>
     </nav>
@@ -65,22 +65,22 @@
 
   <p-tabPanel header="Reviews">
     <nav class="nav">
-      <li routerLinkActive="active">
+      <li>
         <a class="nav-link" routerLink="review-home"><i class="icon-home-1"></i><span>Review Home</span></a>
       </li>
-      <li routerLinkActive="active">
+      <li>
         <a class="nav-link" ><i class="icon-folder-3"></i><span>Review Entire File</span></a>
       </li>
-      <li routerLinkActive="active">
+      <li>
         <a class="nav-link" routerLink="review-selected"><i class="icon-add-1"></i><span>Review Selected</span></a>
       </li>
-      <li routerLinkActive="active">
+      <li>
         <a class="nav-link" routerLink="new-use-case"><i class="icon-files"></i><span>My Reviews</span></a>
       </li>
-      <li routerLinkActive="active">
+      <li>
         <a class="nav-link" routerLink="use-case-details"><i class="icon-add-user"></i><span>Add Users</span></a>
       </li>
-      <li routerLinkActive="active">
+      <li>
         <a class="nav-link" ><i class="icon-delete-2"></i><span>Delete Review</span></a>
       </li>
     </nav>
@@ -88,25 +88,25 @@
 
   <p-tabPanel header="Help">
     <nav class="nav">
-      <li routerLinkActive="active">
+      <li>
         <a class="nav-link" routerLink="review-home"><i class="icon-add-2"></i><span>Mark as Favorite</span></a>
       </li>
-      <li routerLinkActive="active">
+      <li>
         <a class="nav-link" ><i class="icon-calendar-1"></i><span>Mark as Baseline</span></a>
       </li>
-      <li routerLinkActive="active">
+      <li>
         <a class="nav-link" routerLink="review-selected"><i class="icon-file"></i><span>Object Properties</span></a>
       </li>
-      <li routerLinkActive="active">
+      <li>
         <a class="nav-link" ><i class="icon-import"></i><span>Import</span></a>
       </li>
-      <li routerLinkActive="active">
+      <li>
         <a class="nav-link" ><i class="icon-before-after"></i><span>Compare Specs</span></a>
       </li>
-      <li routerLinkActive="active">
+      <li>
         <a class="nav-link" ><i class="icon-driver-license"></i><span>View Object ID</span></a>
       </li>
-      <li routerLinkActive="active">
+      <li>
         <a class="nav-link" ><i class="icon-diagnostic"></i><span>View History</span></a>
       </li>
     </nav>

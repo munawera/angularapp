@@ -7,10 +7,17 @@ import { TreeViewService } from "../../services/tree-view.service";
   styleUrls: ['./auto-fill-case.component.scss']
 })
 export class AutoFillCaseComponent implements OnInit {
-
+  caseDetail: any = true;
   constructor(public treeViewService: TreeViewService) { }
 
   ngOnInit(): void {
+  }
+
+  openCaseDetail(){
+    this.caseDetail = false;
+  }
+  closeCaseDetail(){
+    this.caseDetail = true;
   }
 
 }

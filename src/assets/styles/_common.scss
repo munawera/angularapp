@@ -162,7 +162,7 @@ td{
     li{
       margin: 0 7.3px 0 0 !important;
       a{
-        background: #dde7ec !important;
+        background: $gray-200 !important;
         color: #5e5e5e !important;
         text-transform: uppercase;
         font-size: 14px;
@@ -185,7 +185,6 @@ td{
     }
   }
   .p-tabview-panels{
-    background: #f4f8f9 !important;
     min-height: 435px;
     border: 1px $secondary solid !important;
     padding: 0.75rem !important;
