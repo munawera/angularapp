@@ -39,6 +39,7 @@ import {OverlayPanelModule} from "primeng/overlaypanel";
 import {DialogModule} from "primeng/dialog";
 import { OpenSpecsComponent } from './components/open-specs/open-specs.component';
 import {ListboxModule} from "primeng/listbox";
+import { TabMenuComponent } from './components/tab-menu/tab-menu.component';
 
 
 @NgModule({
@@ -60,6 +61,7 @@ import {ListboxModule} from "primeng/listbox";
     AutoFillCaseComponent,
     SaveSpecsModalComponent,
     OpenSpecsComponent,
+    TabMenuComponent,
   ],
     imports: [
         BrowserModule,

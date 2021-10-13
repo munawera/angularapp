@@ -1,5 +1,4 @@
-.main-menu{
-
+.main-menu, .menu-tab-view{
   .p-tabmenu{
     .p-tabmenu-nav {
       border: 0 !important;
@@ -56,7 +55,6 @@
       }
     }
   }
-
   .p-tabview-panels{
     padding: 0 !important;
     box-shadow: 0 35px 24px -31px #c6c5cc;
@@ -123,7 +121,6 @@
 
 
 
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////Media Query For Responsive//////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -134,7 +131,7 @@
   .p-tabview .p-tabview-panels{
     padding: 0 !important;
   }
-  .main-menu{
+  .main-menu, .menu-tab-view{
     .tab-view-mobile{
       display: none;
       &.show{
@@ -163,7 +160,7 @@
   .p-tabview .p-tabview-panels{
     padding: 0 !important;
   }
-  .main-menu{
+  .main-menu, .menu-tab-view{
     .tab-view-mobile{
       display: none;
       &.show{
@@ -204,7 +201,7 @@
   .p-tabview .p-tabview-panels{
     padding: 0 !important;
   }
-  .main-menu{
+  .main-menu, .menu-tab-view{
     .tab-view-mobile{
       display: none;
       &.show{
@@ -240,7 +237,7 @@
 
 
 @media (min-width: 992px) and (max-width: 1199px){
-  .main-menu{
+  .main-menu, .menu-tab-view{
     .p-tabview-nav-content{
       .p-tabview-nav {
         li{
@@ -256,7 +253,7 @@
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  .main-menu{
+  .main-menu, .menu-tab-view{
     .p-tabview-nav-content{
       .p-tabview-nav {
         li{
