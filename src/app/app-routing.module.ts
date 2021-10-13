@@ -6,8 +6,10 @@ import { NewUseCaseComponent } from './new-use-case/new-use-case.component';
 import { UseCaseDetailsComponent } from './use-case-details/use-case-details.component';
 import { EnterpriseLibraryComponent } from "./enterprise-library/enterprise-library.component";
 import { ToolsComponent } from "./tools/tools.component";
+import { DashboardComponent } from "./dashboard/dashboard.component";
 
 const routes: Routes = [
+  { path: '', component: DashboardComponent },
   { path: 'review-home', component: ReviewHomeComponent },
   { path: 'review-selected', component: ReviewSelectedComponent },
   { path: 'new-use-case', component: NewUseCaseComponent },

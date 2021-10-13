@@ -11,15 +11,15 @@
            (keydown.control.q)="treeViewService.addChild('')"
            (keydown.control.enter)="treeViewService.addRoot('')"
            (keydown.control.d)="treeViewService.removeItem('')"
-           (keydown.control.space)="treeViewService.openAutoFillCase()"
+           (keydown.control.s)="treeViewService.openAutoFillCase()"
            (keydown.enter)="treeViewService.controlEnter()">
 
     <app-auto-fill-case [hidden]="treeViewService.isAutoFill" *ngIf="treeViewService?.itemList?.id == node.id"></app-auto-fill-case>
     <app-open-specs></app-open-specs>
 
-    <a href="javascript:" [hidden]="treeViewService.isShowId" (click)="treeViewService.saveSpecs()">{{node.id}}</a>
-    <a href="javascript:" class="icon-flag-o"></a>
-    <a href="javascript:" class="icon-chat"></a>
+    <a [hidden]="treeViewService.isShowId" (click)="treeViewService.saveSpecs()">{{node.id}}</a>
+    <a class="icon-flag-o"></a>
+    <a class="icon-chat"></a>
 
   </ng-template>
 </p-tree>
