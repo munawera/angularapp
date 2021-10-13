@@ -41,6 +41,7 @@ import { OpenSpecsComponent } from './components/open-specs/open-specs.component
 import {ListboxModule} from "primeng/listbox";
 import { TabMenuComponent } from './components/tab-menu/tab-menu.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -64,6 +65,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     OpenSpecsComponent,
     TabMenuComponent,
     DashboardComponent,
+    LoginComponent,
   ],
     imports: [
         BrowserModule,
