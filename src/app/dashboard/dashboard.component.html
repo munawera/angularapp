@@ -74,7 +74,7 @@
           <div class="card">
             <div class="card-head">Review Group</div>
             <div class="card-body">
-              <p-table styleClass="p-datatable head-style-2" [paginator]="false" paginatorPosition="bottom" [rows]="5" [value]="review" [resizableColumns]="true">
+              <p-table styleClass="p-datatable free-style-2" [paginator]="false" paginatorPosition="bottom" [rows]="5" [value]="review" [scrollable]="true" scrollHeight="296px">
                 <ng-template pTemplate="header" let-columns>
                   <tr>
                     <th style="width: 30px">ID </th>
@@ -117,13 +117,21 @@
                 <div class="col-md-12">To: Umar</div>
               </div>
               <p class="mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                <br>
+                <br>
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
               </p>
             </div>
             <div class="card-footer">
               <div class="row">
-                <div class="col-md-6">Open Review</div>
-                <div class="col-md-6 text-end">Delete</div>
+                <div class="col-md-6"><button type="button" class="btn btn-link"><i class="icon-folder-3"></i>Open Review</button></div>
+                <div class="col-md-6 text-end"><button type="button" class="btn btn-link"><i class="icon-delete-2"></i>Delete</button></div>
               </div>
             </div>
           </div>
@@ -140,7 +148,7 @@
           <div class="div">
             <div class="row">
               <div class="col-md-12">
-                <p-table styleClass="p-datatable free-style" [paginator]="false" paginatorPosition="bottom" [rows]="5" [value]="library" [resizableColumns]="true">
+                <p-table styleClass="p-datatable free-style" [paginator]="false" paginatorPosition="bottom" [rows]="5" [value]="library" [resizableColumns]="true" [scrollable]="true" scrollHeight="611px">
                   <ng-template pTemplate="header" let-columns>
                     <tr>
                       <th style="width: 80%">Project Name </th>
