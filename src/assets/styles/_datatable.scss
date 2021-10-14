@@ -19,6 +19,40 @@
     font-size: 14px;
     white-space:nowrap;
   }
+  &.free-style{
+    margin-bottom: 0;
+    .p-datatable-thead > tr{
+      background: transparent !important;
+      th{
+        background: transparent !important;
+        font-weight: 600 !important;
+        border: 0 !important;
+        padding: 4px 12px;
+        color: #5e5e5e !important;
+      }
+      &:last-child{
+        text-align: right;
+      }
+    }
+    .p-datatable-tbody > tr{
+      td {
+        font-size: 14px !important;
+        padding: 4px 12px;
+        background: #f4f8f9;
+        border-bottom: 3px solid #fff;
+        color: #9997aa;
+        cursor: pointer;
+      }
+      &:hover{
+        td{
+          background: #e3ebee;
+        }
+      }
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
 }
 
 .p-datatable-striped{

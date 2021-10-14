@@ -42,6 +42,71 @@
   }
 }
 
+.tabview-dashboard{
+  .p-tabview-panels{
+    border-radius: 5px;
+  }
+  .p-tabview-nav {
+    background: transparent !important;
+    margin-bottom: 10px;
+    border: none !important;
+    li{
+      .p-tabview-nav-link{
+        border-radius: 5px !important;
+        outline: none !important;
+        border: none !important;
+        font-weight: 400;
+        padding: 8px 14.3px !important;
+        white-space: nowrap;
+        font-size: 14px !important;
+        margin-right: 6px !important;
+        &:hover{
+          background: $info !important;
+          color: $white !important;
+        }
+      }
+      #p-tabpanel-3-label{
+        margin-right: 0 !important;
+      }
+    }
+
+
+    .p-tabview-ink-bar{
+      display: none !important;
+    }
+    .p-highlight{
+      .p-tabview-nav-link{
+        background: $info !important;
+        color: $white !important;
+        border-radius: 5px !important;
+        outline: none !important;
+        border: none !important;
+        position: relative;
+        overflow: visible;
+        &:focus{
+          box-shadow: none !important;
+        }
+        &:before{
+          font-family: "primeng" !important;
+          font-style: normal !important;
+          font-weight: normal !important;
+          font-variant: normal !important;
+          text-transform: none !important;
+          speak: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          content: "\7a";
+          position: absolute;
+          bottom: -8px;
+          left: 44%;
+          color: $info;
+        }
+      }
+    }
+  }
+}
+
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

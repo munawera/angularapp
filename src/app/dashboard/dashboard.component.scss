@@ -1,0 +1,50 @@
+@import "../../assets/styles/functions";
+@import "../../assets/styles/variables";
+.container-fluid{
+  padding: 0.75rem;
+  background: #f4f8f9;
+}
+.info-card{
+  padding: 1rem;
+  background: $white;
+  border-radius: 5px;
+  ul{
+    margin: 9px 0 0 0;
+    padding: 0;
+    list-style: none;
+    li{
+      font-size: 14px;
+      text-align: left;
+      padding: 2px 0;
+      color: #5e5e5e;
+    }
+  }
+}
+.card{
+  .card-head{
+    padding: 10px 15px;
+    background: linear-gradient(
+        180deg, #fcfcfc 0%, #eeeeee 100%) !important;
+    border-radius: 5px 5px 0 0;
+    font-size: 14px;
+    color: #5e5e5e;
+  }
+  .card-body{
+    h3{
+      background: $info;
+      color: #fff;
+      min-height: 85px;
+      text-align: center;
+      margin-bottom: 0 !important;
+      padding: 15px 10px;
+      font-size: 33px !important;
+      border-radius: 5px;
+      line-height: 1;
+      small{
+        display: inline-block;
+        width: 100%;
+        font-size: 14px;
+      }
+    }
+  }
+}
