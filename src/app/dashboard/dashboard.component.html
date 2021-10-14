@@ -2,7 +2,7 @@
   <div class="row g-3">
     <div class="col-md-9">
       <div class="row g-3">
-        <div class="col-md-3 text-center">
+        <div class="col-md-2 text-center">
           <div class="info-card">
             <img src="../../assets/images/dell-logo.png" width="90" alt="">
             <ul>
@@ -15,65 +15,121 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-9">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="card">
-                <div class="card-head">Object</div>
-                <div class="card-body">
-                  <div class="row g-3">
-                    <div class="col-md-4">
-                      <h3>6 <small>Requirements</small></h3>
-                    </div>
-                    <div class="col-md-4">
-                      <h3>223 <small>use cases</small></h3>
-                    </div>
-                    <div class="col-md-4">
-                      <h3>56 <small>Requirements</small></h3>
-                    </div>
-                    <div class="col-md-4">
-                      <h3>6 <small>Requirements</small></h3>
-                    </div>
-                    <div class="col-md-4">
-                      <h3>223 <small>use cases</small></h3>
-                    </div>
-                    <div class="col-md-4">
-                      <h3>56 <small>Requirements</small></h3>
-                    </div>
-                  </div>
+        <div class="col-md-5">
+          <div class="card">
+            <div class="card-head">Object</div>
+            <div class="card-body">
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <h3>6 <small>Requirements</small></h3>
                 </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card">
-                <div class="card-head">Object with respect to status</div>
-                <div class="card-body">
-                  <div class="row g-3">
-                    <div class="col-md-4">
-                      <h3>6 <small>Requirements</small></h3>
-                    </div>
-                    <div class="col-md-4">
-                      <h3>223 <small>use cases</small></h3>
-                    </div>
-                    <div class="col-md-4">
-                      <h3>56 <small>Requirements</small></h3>
-                    </div>
-                    <div class="col-md-4">
-                      <h3>6 <small>Requirements</small></h3>
-                    </div>
-                    <div class="col-md-4">
-                      <h3>223 <small>use cases</small></h3>
-                    </div>
-                    <div class="col-md-4">
-                      <h3>56 <small>Requirements</small></h3>
-                    </div>
-                  </div>
+                <div class="col-md-4">
+                  <h3>223 <small>use cases</small></h3>
+                </div>
+                <div class="col-md-4">
+                  <h3>56 <small>Requirements</small></h3>
+                </div>
+                <div class="col-md-4">
+                  <h3>6 <small>Requirements</small></h3>
+                </div>
+                <div class="col-md-4">
+                  <h3>223 <small>use cases</small></h3>
+                </div>
+                <div class="col-md-4">
+                  <h3>56 <small>Requirements</small></h3>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="col-md-5">
+          <div class="card">
+            <div class="card-head">Object with respect to status</div>
+            <div class="card-body">
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <h3>6 <small>Requirements</small></h3>
+                </div>
+                <div class="col-md-4">
+                  <h3>223 <small>use cases</small></h3>
+                </div>
+                <div class="col-md-4">
+                  <h3>56 <small>Requirements</small></h3>
+                </div>
+                <div class="col-md-4">
+                  <h3>6 <small>Requirements</small></h3>
+                </div>
+                <div class="col-md-4">
+                  <h3>223 <small>use cases</small></h3>
+                </div>
+                <div class="col-md-4">
+                  <h3>56 <small>Requirements</small></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-7">
+          <div class="card">
+            <div class="card-head">Review Group</div>
+            <div class="card-body">
+              <p-table styleClass="p-datatable head-style-2" [paginator]="false" paginatorPosition="bottom" [rows]="5" [value]="review" [resizableColumns]="true">
+                <ng-template pTemplate="header" let-columns>
+                  <tr>
+                    <th style="width: 30px">ID </th>
+                    <th>Title</th>
+                    <th>From user</th>
+                    <th>To user</th>
+                    <th>Date / Time</th>
+                    <th>Action</th>
+                  </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-library>
+                  <tr>
+                    <td>{{library.id}}</td>
+                    <td>{{library.title}}</td>
+                    <td>{{library.created_by}}</td>
+                    <td>{{library.category}}</td>
+                    <td>{{library.created}}</td>
+                    <td>
+                      <button type="button" class="btn btn-link">Open</button>
+                    </td>
+                  </tr>
+                </ng-template>
+              </p-table>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="card">
+            <div class="card-head">
+              <ul>
+                <li>Review ID: 654</li>
+                <li>Priority: <span class="red">High</span></li>
+                <li>Status: <span class="green">Open</span></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <div class="row g-3 from_to">
+                <div class="col-md-6">From: Fahad</div>
+                <div class="col-md-6 text-end">Date: 27 Apr 2019</div>
+                <div class="col-md-12">To: Umar</div>
+              </div>
+              <p class="mt-4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="row">
+                <div class="col-md-6">Open Review</div>
+                <div class="col-md-6 text-end">Delete</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
     <div class="col-md-3">
       <p-tabView styleClass="tabview-dashboard">

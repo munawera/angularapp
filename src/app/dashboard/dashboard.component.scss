@@ -3,17 +3,19 @@
 .container-fluid{
   padding: 0.75rem;
   background: #f4f8f9;
+  height: calc(100vh - 66px);
 }
 .info-card{
-  padding: 1rem;
-  background: $white;
+  padding: 1rem .75rem;
+  background: #fff;
   border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
   ul{
-    margin: 9px 0 0 0;
+    margin: 27px 0 0 0;
     padding: 0;
     list-style: none;
     li{
-      font-size: 14px;
+      font-size: 12px;
       text-align: left;
       padding: 2px 0;
       color: #5e5e5e;
@@ -28,6 +30,27 @@
     border-radius: 5px 5px 0 0;
     font-size: 14px;
     color: #5e5e5e;
+    ul{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li{
+        display: inline-block;
+        width: 33%;
+        border-right: 1px #ccc solid;
+        text-align: center;
+        font-size: 14px;
+        &:last-child{
+          border-right: none;
+        }
+        .red{
+          color: #df1670;
+        }
+        .green{
+          color: #11bd42;
+        }
+      }
+    }
   }
   .card-body{
     h3{
@@ -46,5 +69,18 @@
         font-size: 14px;
       }
     }
+    .from_to{
+      font-size: 14px;
+      color: $secondary;
+    }
+  }
+  .card-footer{
+    padding: 10px 15px;
+    background: linear-gradient(
+        3deg, #fcfcfc 0%, #eeeeee 100%) !important;
+    border-radius: 0 0 5px 5px;
+    font-size: 14px;
+    color: #5e5e5e;
+    border-top-color: #e7e7e7 !important;
   }
 }
