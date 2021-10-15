@@ -6,7 +6,7 @@
           (click)="treeViewService.selectItem(node)"
           [ngClass]="{'selected': treeViewService.itemList?.id === node.id}"
           [hidden]="node.id==treeViewService.editItem"
-          (clickOutside)="treeViewService.onClickedOutsideTree($event)" [attachOutsideOnClick]="true">{{node.label}}</span>
+          >{{node.label}}</span>
     <input class="form-control edit-input"
            type="text" [(ngModel)]="node.label" *ngIf="node.id==treeViewService.editItem"
            (keydown.control.q)="treeViewService.addChild('')"
@@ -15,6 +15,7 @@
            (keydown.control.shift.s)="treeViewService.openAutoFillCase()"
            (keydown.enter)="treeViewService.controlEnter()"
            (clickOutside)="treeViewService.onClickedOutsideTree($event)" [attachOutsideOnClick]="true">
+<!--    (clickOutside)="treeViewService.onClickedOutsideTree($event)" [attachOutsideOnClick]="true"-->
 
     <app-auto-fill-case [hidden]="treeViewService.isAutoFill" *ngIf="treeViewService?.itemList?.id == node.id"></app-auto-fill-case>
     <app-open-specs></app-open-specs>
@@ -30,8 +31,10 @@
         <i class="icon-caret-down-two"></i>
       </a>
       <div class="dropdown-menu" *ngIf="treeViewService?.itemList?.id == node.id" [ngClass]="{'show': caseDropdown}">
-        <a class="dropdown-item" href="javascript:"><i class="icon-flag-o"></i> Flag</a>
-        <a class="dropdown-item" href="javascript:"><i class="icon-chat"></i> Chat</a>
+        <a class="dropdown-item" href="javascript:">Object Id: {{node.id}}</a>
+        <a class="dropdown-item" href="javascript:">Create Feedback</a>
+        <a class="dropdown-item" href="javascript:">Insert Comment</a>
+        <a class="dropdown-item" href="javascript:" (click)="treeViewService.saveSpecs()">View Properties</a>
       </div>
     </div>
 
