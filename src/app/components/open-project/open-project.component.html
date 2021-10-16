@@ -1,0 +1,40 @@
+<p-dialog [(visible)]="treeViewService.displayOpenModal" [modal]="true" [style]="{width: '85vw'}" [baseZIndex]="10000"
+          [draggable]="false" [resizable]="false" class="open-specs">
+  <h4>Open Project</h4>
+  <br>
+  <div class="row g-3 align-items-center">
+    <div class="col-auto">
+      <label for="inputPassword6" class="col-form-label">Search Project</label>
+    </div>
+    <div class="col-3">
+      <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+    </div>
+  </div>
+  <br>
+  <p-table styleClass="p-datatable free-style-2" [paginator]="false" paginatorPosition="bottom" [rows]="5" [value]="review" [scrollable]="true" scrollHeight="500px">
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th>Project title</th>
+        <th>Date Created</th>
+        <th>Created by</th>
+        <th style="width: 50%">Description</th>
+
+        <th>Action</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-library>
+      <tr>
+        <td>{{library.title}}</td>
+        <td>{{library.created}}</td>
+        <td>{{library.created_by}}</td>
+        <td>{{library.category}}</td>
+
+        <td>
+          <button type="button" (click)="treeViewService.openProject()" class="btn btn-link">Open</button>
+          <button type="button" (click)="treeViewService.openProject()" class="btn btn-link">Edit</button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+</p-dialog>

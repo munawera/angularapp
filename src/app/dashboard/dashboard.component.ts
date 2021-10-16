@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TreeViewService} from "../services/tree-view.service";
 
 @Component({
   selector: 'app-dashboard',
@@ -183,7 +184,7 @@ export class DashboardComponent implements OnInit {
     },
 
   ];
-  constructor() { }
+  constructor(public treeViewService: TreeViewService) { }
 
   ngOnInit(): void {
   }

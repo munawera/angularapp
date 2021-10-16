@@ -31,6 +31,7 @@ export class TreeViewService {
   public isAutoFill: any = true;
   public isSaveSpecs: any = true;
   public displayModal: boolean = false;
+  public displayOpenModal: boolean = false;
 
 
   constructor() { }
@@ -38,6 +39,10 @@ export class TreeViewService {
 
   showDialog() {
     this.displayModal = true;
+  }
+
+  openProject() {
+    this.displayOpenModal = true;
   }
 
   saveSpecs() {

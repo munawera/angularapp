@@ -74,7 +74,7 @@
           <div class="card">
             <div class="card-head">Review Group</div>
             <div class="card-body">
-              <p-table styleClass="p-datatable free-style-2" [paginator]="false" paginatorPosition="bottom" [rows]="5" [value]="review" [scrollable]="true" scrollHeight="296px">
+              <p-table styleClass="p-datatable free-style-2" [paginator]="false" paginatorPosition="bottom" [rows]="5" [value]="review" [scrollable]="true" scrollHeight="310px">
                 <ng-template pTemplate="header" let-columns>
                   <tr>
                     <th style="width: 30px">ID </th>
@@ -93,7 +93,7 @@
                     <td>{{library.category}}</td>
                     <td>{{library.created}}</td>
                     <td>
-                      <button type="button" class="btn btn-link">Open</button>
+                      <button type="button" (click)="treeViewService.openProject()" class="btn btn-link">Open</button>
                     </td>
                   </tr>
                 </ng-template>
@@ -200,3 +200,5 @@
     </div>
   </div>
 </div>
+
+<app-open-project></app-open-project>
