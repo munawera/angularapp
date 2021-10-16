@@ -2,8 +2,8 @@
 @import "../../assets/styles/variables";
 
 .login{
-  padding: 105px 30px 30px 30px;
-  height: 515px;
+  padding: 140px 30px 30px 30px;
+  height: 550px;
   width: 400px;
   position: absolute;
   top: 0;
@@ -11,7 +11,8 @@
   left: 0;
   right: 0;
   margin: auto;
-  background: url("../../assets/images/pearlsLogo.png") no-repeat center 25px #fff;
+  background: url("../../assets/images/pearlsLogoFull.jpg") no-repeat center 15px #fff;
+  background-size: 125px;
   border-radius: 10px;
   box-shadow: 0 3px 20px 0px rgb(0 0 0 / 18%);
   -moz-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
