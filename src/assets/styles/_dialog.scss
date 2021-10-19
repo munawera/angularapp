@@ -22,18 +22,21 @@
   }
   .p-tabview-nav-link{
     margin: 0 10px 0 0 !important;
-    padding: 10px 15px !important;
+    padding: 7px 15px 10px 15px !important;
     border: 1px #e0e0e0 solid !important;
     border-radius: 5px 5px 0 0 !important;
     display: block;
     text-align: center;
-    width: 121px;
+    //width: 121px;
     font-size: 14px;
     color: $primary !important;
     border-bottom: 0 !important;
     i{
-      display: block !important;
-      font-size: 20px;
+      display: inline-block;
+      font-size: 16px;
+      margin-right: 10px;
+      position: relative;
+      top: 3px;
     }
   }
   .p-tabview-ink-bar{

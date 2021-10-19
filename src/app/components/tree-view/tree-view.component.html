@@ -14,7 +14,7 @@
            (keydown.control.d)="treeViewService.removeItem('')"
            (keydown.control.shift.s)="treeViewService.openAutoFillCase()"
            (keydown.enter)="treeViewService.controlEnter()"
-           (clickOutside)="treeViewService.onClickedOutsideTree($event)" [attachOutsideOnClick]="true">
+           >
 <!--    (clickOutside)="treeViewService.onClickedOutsideTree($event)" [attachOutsideOnClick]="true"-->
 
     <app-auto-fill-case [hidden]="treeViewService.isAutoFill" *ngIf="treeViewService?.itemList?.id == node.id"></app-auto-fill-case>

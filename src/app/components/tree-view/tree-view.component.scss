@@ -10,6 +10,8 @@
   top: 2px;
   .dropdown-menu{
     padding: 0 !important;
+    box-shadow: 0 0 9px #d3d3d3;
+    border: none !important;
     &.show{
       position: absolute;
       right: 0;
@@ -20,6 +22,9 @@
       padding: 0.3rem 0.6rem;
       font-size: 14px;
       border-bottom: 1px #d9d9d9 solid;
+      &:last-child{
+        border-bottom: none !important;
+      }
       i{
         position: relative;
         top:2px;
