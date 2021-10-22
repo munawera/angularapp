@@ -1,20 +1,22 @@
 <p-tree [value]="treeViewService.items">
   <ng-template let-node  pTemplate="default">
-
-    <span class="me-auto"
-          (dblclick)="treeViewService.showEditor(node.id, node)"
-          (click)="treeViewService.selectItem(node)"
-          [ngClass]="{'selected': treeViewService.itemList?.id === node.id}"
-          [hidden]="node.id==treeViewService.editItem"
-          >{{node.label}}</span>
-    <input class="form-control edit-input"
+    <span style="width: 100%;" (clickOutside)="treeViewService.onClickedOutsideTree($event)" [attachOutsideOnClick]="true">
+      <span class="me-auto"
+            (dblclick)="treeViewService.showEditor(node.id, node)"
+            (click)="treeViewService.selectItem(node)"
+            [ngClass]="{'selected': treeViewService.itemList?.id === node.id}"
+            [hidden]="node.id==treeViewService.editItem"
+      >{{node.label}}</span>
+      <input class="form-control edit-input"
            type="text" [(ngModel)]="node.label" *ngIf="node.id==treeViewService.editItem"
            (keydown.control.q)="treeViewService.addChild('')"
            (keydown.control.enter)="treeViewService.addRoot('')"
            (keydown.control.d)="treeViewService.removeItem('')"
            (keydown.control.shift.s)="treeViewService.openAutoFillCase()"
            (keydown.enter)="treeViewService.controlEnter()"
-           >
+    >
+    </span>
+
 <!--    (clickOutside)="treeViewService.onClickedOutsideTree($event)" [attachOutsideOnClick]="true"-->
 
     <app-auto-fill-case [hidden]="treeViewService.isAutoFill" *ngIf="treeViewService?.itemList?.id == node.id"></app-auto-fill-case>
