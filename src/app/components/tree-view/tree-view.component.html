@@ -31,10 +31,10 @@
         <i class="icon-caret-down-two"></i>
       </a>
       <div class="dropdown-menu" *ngIf="treeViewService?.itemList?.id == node.id" [ngClass]="{'show': caseDropdown}">
-        <a class="dropdown-item" href="javascript:">Object Id: {{node.id}}</a>
-        <a class="dropdown-item" href="javascript:">Create Feedback</a>
-        <a class="dropdown-item" href="javascript:">Insert Comment</a>
-        <a class="dropdown-item" href="javascript:" (click)="treeViewService.saveSpecs()">View Properties</a>
+        <a class="dropdown-item" href="javascript:"><i class="icon-ios-lightbulb-outline"></i> Object Id: {{node.id}}</a>
+        <a class="dropdown-item" href="javascript:"><i class="icon-ios-list-outline"></i> Create Feedback</a>
+        <a class="dropdown-item" href="javascript:"><i class="icon-bubble-comment-streamline-talk"></i> Insert Comment</a>
+        <a class="dropdown-item" href="javascript:" (click)="treeViewService.saveSpecs()"><i class="icon-eye"></i> View Properties</a>
       </div>
     </div>
 

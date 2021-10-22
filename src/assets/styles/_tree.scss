@@ -71,7 +71,19 @@
       }
     }
     .p-tree-wrapper{
+      position: relative;
       overflow: visible;
+      &:before{
+        content: "";
+        height: 105%;
+        width: 37px;
+        background: #edf1f4;
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        z-index: 0;
+        border-right: 1px #e0e0e0 solid;
+      }
       .p-tree-container{
         position: relative;
         list-style-type: decimal;

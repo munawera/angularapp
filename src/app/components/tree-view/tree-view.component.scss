@@ -10,18 +10,37 @@
   top: 2px;
   .dropdown-menu{
     padding: 0 !important;
-    box-shadow: 0 0 9px #d3d3d3;
+    box-shadow: 3px 0 8px #d3d3d3;
     border: none !important;
+    &:before{
+      content: "\42";
+      font-family: "primeng" !important;
+      font-style: normal !important;
+      font-weight: normal !important;
+      font-variant: normal !important;
+      text-transform: none !important;
+      speak: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      position: absolute;
+      right: -13px;
+      top: 12px;
+      height: 20px;
+      color: #fff;
+      font-size: 20px;
+      // box-shadow: 0 0 9px #d3d3d3;
+    }
     &.show{
       position: absolute;
-      right: 0;
-      top:20px;
+      right: 40px;
+      top: -15px;
     }
     .dropdown-item{
       margin: 0 !important;
       padding: 0.3rem 0.6rem;
       font-size: 14px;
-      border-bottom: 1px #d9d9d9 solid;
+      // border-bottom: 1px #d9d9d9 solid;
       &:last-child{
         border-bottom: none !important;
       }
