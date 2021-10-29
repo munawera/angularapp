@@ -7,17 +7,19 @@ export class TreeViewService {
   public items = [
     {
       "id": "7340",
+      "index": "1",
       "label": "Documents",
       "data": "Documents Folder",
       expanded: true,
       "children": [
         {
           "id": "7341",
+          "index": "2",
           "label": "Work",
           "data": "Work Folder",
           expanded: true,
           "children": [
-            {"id": "7011", "label": "Expenses", "data": "Expenses Document", expanded: true, "children": []}]
+            {"id": "7011", "index": "3", "label": "Expenses", "data": "Expenses Document", expanded: true, "children": []}]
         },
       ]
     }
@@ -70,15 +72,15 @@ export class TreeViewService {
     itemList = this.itemList;
     let id = String(Math.floor(1000 + Math.random() * 9000));
     if(itemList.parent){
-      itemList.parent.children.push({"id": id, "label": "Add Root", "data": "", expanded: true, "children": []});
+      itemList.parent.children.push({"id": id, "index": "00", "label": "Add Root", "data": "", expanded: true, "children": []});
     } else {
-      this.items.push({"id": id, "label": "Add Root", "data": "", expanded: true, "children": []})
+      this.items.push({"id": id, "index": "00", "label": "Add Root", "data": "", expanded: true, "children": []})
     }
   }
   addChild(itemList: any){
     itemList = this.itemList;
     let id = String(Math.floor(1000 + Math.random() * 9000));
-    itemList?.children.push({"id": id, "label": "Add child", "data": "", expanded: true, "children": []});
+    itemList?.children.push({"id": id, "index": "00", "label": "Add child", "data": "", expanded: true, "children": []});
   }
   removeItem(itemList: any) {
     itemList = this.itemList;

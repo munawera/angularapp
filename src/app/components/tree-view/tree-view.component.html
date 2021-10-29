@@ -1,6 +1,6 @@
 <p-tree [value]="treeViewService.items">
-  <ng-template let-node  pTemplate="default">
-    <span style="width: 100%;" (clickOutside)="treeViewService.onClickedOutsideTree($event)" [attachOutsideOnClick]="true">
+  <ng-template let-node let-i="rowIndex" pTemplate="default">
+    <span class="tree-line" style="width: 100%;" (clickOutside)="treeViewService.onClickedOutsideTree($event)" [attachOutsideOnClick]="true">
       <span class="me-auto"
             (dblclick)="treeViewService.showEditor(node.id, node)"
             (click)="treeViewService.selectItem(node)"
@@ -15,13 +15,11 @@
            (keydown.control.shift.s)="treeViewService.openAutoFillCase()"
            (keydown.enter)="treeViewService.controlEnter()"
     >
+      <app-auto-fill-case [hidden]="treeViewService.isAutoFill" *ngIf="treeViewService?.itemList?.id == node.id"></app-auto-fill-case>
+    <app-open-specs></app-open-specs>
     </span>
 
 <!--    (clickOutside)="treeViewService.onClickedOutsideTree($event)" [attachOutsideOnClick]="true"-->
-
-    <app-auto-fill-case [hidden]="treeViewService.isAutoFill" *ngIf="treeViewService?.itemList?.id == node.id"></app-auto-fill-case>
-    <app-open-specs></app-open-specs>
-
 <!--    <a [hidden]="treeViewService.isShowId" (click)="treeViewService.saveSpecs()">{{node.id}}</a>-->
 <!--    <a [hidden]="treeViewService.isShowId">{{node.id}}</a>-->
 <!--    <a class="icon-flag-o"></a>-->
