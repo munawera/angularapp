@@ -1,0 +1,61 @@
+<div class="container-fluid padding-t-b-20">
+
+  <div class="row">
+    <div class="col-lg-9 col-md-8">
+
+      <div class="row align-items-end">
+        <div class="col-md-9">
+          <h2 class="mb-0">File Management</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <input id="search" placeholder="Search" type="text" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <p-table responsiveLayout="stack" styleClass="p-datatable-gridlines custom-table p-datatable-striped head-style-2" [value]="library" [scrollable]="true" scrollHeight="495px">
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th>File Name </th>
+            <th style="width:19rem">Description</th>
+            <th>Type</th>
+            <th>Date Upload</th>
+            <th>Upload By</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-library>
+          <tr>
+            <td><span class="p-column-title">Specification Title</span>{{library.category}}</td>
+            <td><span class="p-column-title">Description</span>{{library.description}}</td>
+            <td><span class="p-column-title">Category</span>{{library.category}}</td>
+            <td><span class="p-column-title">Date Created</span>{{library.created}}</td>
+            <td><span class="p-column-title">Created By</span>{{library.created_by}}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+    <div class="col-lg-3 col-md-4 pd-t-76">
+      <h3>Upload Documents</h3>
+      <form action="">
+        <div class="form-group mb-0">
+          <label for="category">Select file to upload:</label>
+          <input id="category" placeholder="category" type="text" class="form-control">
+        </div>
+        <div class="form-group mb-0">
+          <label for="category_title">Document Title:</label>
+          <input id="category_title" placeholder="category" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="description">Description (Optional):</label>
+          <textarea id="description" placeholder="Description" type="text" rows="4" class="form-control"></textarea>
+        </div>
+
+        <button class="btn btn-outline-primary">Confirm Upload</button>
+        <button class="btn btn-outline-primary">cancel</button>
+
+      </form>
+    </div>
+  </div>
+</div>

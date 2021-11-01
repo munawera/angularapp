@@ -8,6 +8,9 @@ import { EnterpriseLibraryComponent } from "./enterprise-library/enterprise-libr
 import { ToolsComponent } from "./tools/tools.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { LoginComponent } from "./login/login.component";
+import {UserDetailComponent} from "./user-detail/user-detail.component";
+import {UserRolesComponent} from "./user-roles/user-roles.component";
+import {FileManagementComponent} from "./file-management/file-management.component";
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -17,7 +20,10 @@ const routes: Routes = [
   { path: 'new-use-case', component: NewUseCaseComponent },
   { path: 'use-case-details', component: UseCaseDetailsComponent },
   { path: 'enterprise-library', component: EnterpriseLibraryComponent },
+  { path: 'file-management', component: FileManagementComponent },
   { path: 'tools', component: ToolsComponent },
+  { path: 'user-details', component: UserDetailComponent },
+  { path: 'user-roles', component: UserRolesComponent },
 ];
 
 @NgModule({

@@ -43,6 +43,9 @@ import { TabMenuComponent } from './components/tab-menu/tab-menu.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { OpenProjectComponent } from './components/open-project/open-project.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { UserRolesComponent } from './user-roles/user-roles.component';
+import { FileManagementComponent } from './file-management/file-management.component';
 
 
 @NgModule({
@@ -68,6 +71,9 @@ import { OpenProjectComponent } from './components/open-project/open-project.com
     DashboardComponent,
     LoginComponent,
     OpenProjectComponent,
+    UserDetailComponent,
+    UserRolesComponent,
+    FileManagementComponent,
   ],
     imports: [
         BrowserModule,
