@@ -13,7 +13,49 @@
   padding: 25px 40px;
   border: 1px #e4e7f2 solid;
   border-radius: 4px;
+
+  form{
+    .custom-file-upload {
+      border-radius: 4px;
+      display: inline-block;
+      padding: 6px 12px;
+      cursor: pointer;
+      width: 80%;
+      min-height: 220px;
+      font-size: 12px;
+      text-align: center;
+      box-shadow: 3px 3px 19px #e7e7e7;
+      input{
+        display: none !important;
+      }
+      i{
+        position: relative;
+        display: block;
+        height: 160px;
+        &:before{
+          position: absolute;
+          top:30px;
+          left: 0;
+          right: 0;
+          color: #dfdfdf;
+          font-size: 100px;
+        }
+        &:after{
+          content: attr(data-title);
+          font-size: 12px;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          left: 0;
+          font-style: normal;
+          color: #9b9ea2;
+        }
+      }
+    }
+  }
 }
 .btn-primary{
   width: 120px;
 }
+
+
